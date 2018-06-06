@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 11</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contraram para desenvolver o programa que calculará os reajustes.
+			Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
+			salários até R$ 280,00 (incluindo) : aumento de 20%
+			salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+			salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+			salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na tela:
+			o salário antes do reajuste;
+			o percentual de aumento aplicado;
+			o valor do aumento;
+			o novo salário, após o aumento.*/
+			alert ('As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contraram para desenvolver o programa que calculará os reajustes. \nFaça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual');
+
+			let salario = parseFloat(prompt('Informe o seu salário'));
+			
+			let reajuste;
+
+			if (salario <= 280) {
+				reajuste = salario + (salario * 0.20);
+				alert('O antes do reajuste R$' + salario.toFixed(2) + '\nPercentual de aumento aplicado será de 20% \nValor do aumento R$'+ (salario * 0.20) + '\nNovo salário, após aumento R$' + reajuste.toFixed(2));
+			}
+			else if (salario > 280 && salario < 700) {
+				reajuste = salario + (salario * 0.15);
+				alert('O antes do reajuste R$' + salario.toFixed(2) + '\nPercentual de aumento aplicado será de 15% \nValor do aumento R$'+ (salario * 0.15) + '\nNovo salário, após aumento R$' + reajuste.toFixed(2));
+			}
+			else if (salario >= 700 && salario < 1500) {
+				reajuste = salario + (salario * 0.10);
+				alert('O antes do reajuste R$' + salario.toFixed(2) + '\nPercentual de aumento aplicado será de 10% \nValor do aumento R$'+ (salario * 0.10) + '\nNovo salário, após aumento R$' + reajuste.toFixed(2));
+			}
+			else {
+				reajuste = salario + (salario * 0.05);
+				alert('O antes do reajuste R$' + salario.toFixed(2) + '\nPercentual de aumento aplicado será de 5% \nValor do aumento R$'+ (salario * 0.05) + '\nNovo salário, após aumento R$' + reajuste.toFixed(2));
+			}
+		</script>	
+	</body>
+</html>

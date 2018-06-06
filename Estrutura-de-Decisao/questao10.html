@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 10</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+			alert ('Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.');
+			let turno = prompt('Informe o turno que você estuda \nM-matutino \nV-Vespertino \nN- Noturno.');
+			
+			switch (turno){
+				case 'M':
+					alert('Bom dia!');
+					break;
+
+				case 'V':
+					alert('Boa tarde!');
+					break;
+
+				case 'N':
+					alert('Boa noite!');
+					break;
+				default:
+					if (turno == 'm') {
+						alert('Bom dia!');
+					}
+					else if (turno == 'v') {
+						alert('Boa tarde!');
+					}
+					else if (turno == 'n') {
+						alert('Boa noite!');
+					}
+					else{
+						alert('Valor Inválido!');	
+					}
+			}
+		</script>	
+	</body>
+</html>

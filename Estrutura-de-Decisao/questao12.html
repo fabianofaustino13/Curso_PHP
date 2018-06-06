@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 12</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês.
+			Desconto do IR:
+			Salário Bruto até 900 (inclusive) - isento
+			Salário Bruto até 1500 (inclusive) - desconto de 5%
+			Salário Bruto até 2500 (inclusive) - desconto de 10%
+			Salário Bruto acima de 2500 - desconto de 20% 
+			Imprima na tela as informações, dispostas conforme o exemplo abaixo. No exemplo o valor da hora é 5 e a quantidade de hora é 220.*/
+			
+			alert ('Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês.');
+
+			let valorHora = parseFloat(prompt('Informe o valor da hora trabalhada'));
+			let qntHora = parseInt(prompt('Informe quantas horas trabalhou no mês'));
+
+			let salarioBruto = valorHora * qntHora;
+			let irpf, inss, fgts, totalDesconto, salarioLiquido, sindicato;
+
+			if (salarioBruto <= 900) {
+				irpf = salarioBruto * 0;
+				inss = salarioBruto * 0.10;
+				fgts = salarioBruto * 0.11;
+				sindicato = salarioBruto * 0.03;
+				totalDesconto = (irpf + inss);
+				salarioLiquido = salarioBruto - totalDesconto;
+				alert('Salário Bruto :R$' + salarioBruto + '\n(-) IR (isento) :R$' + irpf + '\n(-) INSS (10%) :R$' + inss + '\nFGTS (11%) :R$' + fgts + '\nContribuição sindical (3%) :R$ ' + sindicato + '\nTotal de descontos :R$' + totalDesconto + '\nSalário Líquido :R$ ' + salarioLiquido);
+			}
+			else if (salarioBruto <= 1500) {
+				irpf = salarioBruto * 0.05;;
+				inss = salarioBruto * 0.10;
+				fgts = salarioBruto * 0.11;
+				sindicato = salarioBruto * 0.03;
+				totalDesconto = (irpf + inss);
+				salarioLiquido = salarioBruto - totalDesconto;
+				alert('Salário Bruto :R$' + salarioBruto + '\n(-) IR (5%) :R$' + irpf + '\n(-) INSS (10%) :R$' + inss + '\nFGTS (11%) :R$' + fgts + '\nContribuição sindical (3%) :R$ ' + sindicato + '\nTotal de descontos :R$' + totalDesconto + '\nSalário Líquido :R$ ' + salarioLiquido);
+			}
+			else if (salarioBruto <= 2500) {
+				irpf = salarioBruto * 0.10;;
+				inss = salarioBruto * 0.10;
+				fgts = salarioBruto * 0.11;
+				sindicato = salarioBruto * 0.03;
+				totalDesconto = (irpf + inss);
+				salarioLiquido = salarioBruto - totalDesconto;
+				alert('Salário Bruto :R$' + salarioBruto + '\n(-) IR (10%) :R$' + irpf + '\n(-) INSS (10%) :R$' + inss + '\nFGTS (11%) :R$' + fgts + '\nContribuição sindical (3%) :R$ ' + sindicato + '\nTotal de descontos :R$' + totalDesconto + '\nSalário Líquido :R$ ' + salarioLiquido);
+			}	
+			else {
+				irpf = salarioBruto * 0.20;;
+				inss = salarioBruto * 0.10;
+				fgts = salarioBruto * 0.11;
+				sindicato = salarioBruto * 0.03;
+				totalDesconto = (irpf + inss);
+				salarioLiquido = salarioBruto - totalDesconto;
+				alert('Salário Bruto :R$' + salarioBruto + '\n(-) IR (20%) :R$' + irpf + '\n(-) INSS (10%) :R$' + inss + '\nFGTS (11%) :R$' + fgts + '\nContribuição sindical (3%) :R$ ' + sindicato + '\nTotal de descontos :R$' + totalDesconto + '\nSalário Líquido :R$ ' + salarioLiquido);
+			}
+		</script>	
+	</body>
+</html>
