@@ -6,6 +6,7 @@
 	</head>
 	<body>
 		<script type="text/javascript">
+			let mediaInformada = parseFloat(prompt('Informe a média'));
 			let nota1 = parseFloat(prompt('Informe a nota da avaliação 1'));
 			let nota2 = parseFloat(prompt('Informe a nota da avaliação 2'));
 			let nota3 = parseFloat(prompt('Informe a nota da avaliação 3'));
@@ -18,17 +19,17 @@
 			else if (media >= 5) {
 				alert('Você está de recuperação com média ' + media.toFixed(2) +'\nNota 1: '+ nota1 +'\nNota 2: '+ nota2 +'\nNota 3: '+ nota3);
 				
-				let notaNecessaria = 14 - media;
-				alert('\nNota necessaria ' + notaNecessaria);
+				let notaNecessaria = (mediaInformada * 2) - media;
+				alert('\nNota necessaria ' + notaNecessaria.toFixed(2));
 
 				let nota4 = parseFloat(prompt('Informe a nota da avaliação 4'));
 				let novaMedia = (media + nota4) / 2;
 				
 				if (novaMedia >= 7){
-					alert('\nParabéns, você foi aprovado, na recuperação, com nova média: ' + novaMedia.toFixed(2) +'\nMédia anterior: '+ media +'\nNota da recuperação: '+ nota4);
+					alert('\nParabéns, você foi aprovado, na recuperação, com nova média: ' + novaMedia.toFixed(2) +'\nMédia anterior: '+ media.toFixed(2) +'\nNota da recuperação: '+ nota4);
 				}
 				else{
-					alert('\nSeu burro! Mesmo com recuperação você não conseguiu ser aprovado. Sua nova média é ' + novaMedia.toFixed(2) +'\nMédia anterior: '+ media +'\nNota da recuperação: '+ nota4);
+					alert('\nSeu burro! Mesmo com recuperação você não conseguiu ser aprovado. Sua nova média é ' + novaMedia.toFixed(2) +'\nMédia anterior: '+ media.toFixed(2) +'\nNota da recuperação: '+ nota4);
 				}
 
 			} 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 05</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar:
+			//A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+			//A mensagem "Reprovado", se a média for menor do que sete;
+			//A mensagem "Aprovado com Distinção", se a média for igual a dez.
+			alert ('Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar: ' +
+				'\nA mensagem "Aprovado", se a média alcançada for maior ou igual a sete;'+
+				'\nA mensagem "Reprovado", se a média for menor do que sete;'+
+				'\nA mensagem "Aprovado com Distinção", se a média for igual a dez.');
+			let nota1 = parseFloat(prompt('Informe a nota da avaliação 1'));
+			let nota2 = parseFloat(prompt('Informe a nota da avaliação 2'));
+
+			let media = (nota1 + nota2) / 2;
+
+			if (media == 10) {
+				alert('Aprovado com Distinção e sua média é: ' + media.toFixed(2) +'\nNota 1: '+ nota1 +'\nNota 2: '+ nota2);
+			} 
+			else if (media < 7) {
+				alert('Reprovado com média ' + media.toFixed(2) +'\nNota 1: '+ nota1 +'\nNota 2: '+ nota2);
+			}
+			else {
+				alert('Aprovado com média: ' + media.toFixed(2) +'\nNota 1: '+ nota1 +'\nNota 2: '+ nota2);
+			}
+		</script>	
+	</body>
+</html>
