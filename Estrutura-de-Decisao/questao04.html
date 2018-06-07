@@ -8,7 +8,9 @@
 		<script type="text/javascript">
 			//Faça um Programa que verifique se uma letra digitada é vogal ou consoante.
 			alert('Faça um Programa que verifique se uma letra digitada é vogal ou consoante.');
-			let letra = prompt('Informa uma letra)');
+			let letra1 = prompt('Informa uma letra');
+
+			let letra = letra1.toUpperCase();
 			
 			switch (letra) {
 				case 'A': case 'E': case 'I': case 'O': case 'U':
@@ -16,11 +18,11 @@
 					break;
 			
 				default:
-					if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
-						alert('A letra informada é uma VOGAL.');
+					if (letra >= 0){
+						alert('A letra informada é um NÚMERO POSITIVO');
 					}
-					else if (letra < 0 || letra >= 0){
-						alert('A letra informada é um NÚMERO');
+					else if (letra < 0){
+						alert('A letra informada é um NÚMERO NEGATIVO');
 					}
 					else{
 						alert('A letra informada é uma CONSOANTE');
