@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 15</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
+			Dicas:
+			Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro;
+			Triângulo Equilátero: três lados iguais;
+			Triângulo Isósceles: quaisquer dois lados iguais;
+			Triângulo Escaleno: três lados diferentes;*/
+			
+			alert ('Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.');
+
+			let lado1 = parseFloat(prompt('Informe o primeiro lado'));
+			
+			if (isNaN(lado1)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+			
+			let lado2 = parseFloat(prompt('Informe o segundo lado'));
+			
+			if (isNaN(lado2)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+
+			let lado3 = parseFloat(prompt('Informe o terceiro lado'));
+			
+			if (isNaN(lado3)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+
+			let tipo_triangulo;
+
+			if (lado1 == lado2 && lado2 == lado3)	{
+				tipo_triangulo = 'Equilátero';
+			}
+			else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
+				tipo_triangulo = 'Isósceles';
+			}
+			else {
+				tipo_triangulo = 'Escaleno';
+			}
+
+			alert('Triângulo ' + tipo_triangulo);
+			
+		</script>	
+	</body>
+</html>

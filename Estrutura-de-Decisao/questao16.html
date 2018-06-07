@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 16</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações:
+			Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado;
+			Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuário e encerre o programa;
+			Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário;
+			Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;*/
+			
+			alert ('Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências.');
+
+			let valor_a = parseInt(prompt('Informe o valor para A'));
+			
+			if (isNaN(valor_a)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+			else if (valor_a == 0) {
+				alert('Valor não corresponde a uma equação do 2º grau');
+				exit();
+			}
+			
+			let valor_b = parseInt(prompt('Informe o valor para B'));
+			
+			if (isNaN(valor_b)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+
+			let valor_c = parseInt(prompt('Informe o valor para C'));
+			
+			if (isNaN(valor_c)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+
+			let delta = 0;
+			delta = (valor_b ** 2) - 4*(valor_a)*(valor_c);
+			if (delta < 0) {
+				alert('Delta NEGATIVO!')
+				exit()
+			}
+			else if (delta > 0) {
+				alert('Delta = ' + delta + '\nPortanto, possui 2 raizes reais')
+				exit()
+			}
+			else {
+				alert('Delta = ' + delta + '\nPortanto, possui apenas 1 raiz real')
+				exit()
+			}
+			alert('Delta ' + delta);
+			
+		</script>	
+	</body>
+</html>

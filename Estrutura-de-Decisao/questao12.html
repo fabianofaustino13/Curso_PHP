@@ -15,13 +15,18 @@
 			Imprima na tela as informações, dispostas conforme o exemplo abaixo. No exemplo o valor da hora é 5 e a quantidade de hora é 220.*/
 			
 			alert ('Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês.');
-
 			let valorHora = parseFloat(prompt('Informe o valor da hora trabalhada'));
+			if (isNaN(valorHora)) {
+				alert('Você não digitou um número');
+				exit();
+			}
 			let qntHora = parseInt(prompt('Informe quantas horas trabalhou no mês'));
-
+			if (isNaN(qntHora)) {
+				alert('Você não digitou um número');
+				exit();
+			}
 			let salarioBruto = valorHora * qntHora;
 			let irpf, inss, fgts, totalDesconto, salarioLiquido, sindicato;
-
 			if (salarioBruto <= 900) {
 				irpf = salarioBruto * 0;
 				inss = salarioBruto * 0.10;

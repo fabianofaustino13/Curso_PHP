@@ -17,11 +17,13 @@
 			o valor do aumento;
 			o novo salário, após o aumento.*/
 			alert ('As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contraram para desenvolver o programa que calculará os reajustes. \nFaça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual');
-
 			let salario = parseFloat(prompt('Informe o seu salário'));
 			
-			let reajuste;
-
+			if (isNaN(salario)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+			let reajuste = 0;
 			if (salario <= 280) {
 				reajuste = salario + (salario * 0.20);
 				alert('O antes do reajuste R$' + salario.toFixed(2) + '\nPercentual de aumento aplicado será de 20% \nValor do aumento R$'+ (salario * 0.20) + '\nNovo salário, após aumento R$' + reajuste.toFixed(2));
@@ -38,6 +40,6 @@
 				reajuste = salario + (salario * 0.05);
 				alert('O antes do reajuste R$' + salario.toFixed(2) + '\nPercentual de aumento aplicado será de 5% \nValor do aumento R$'+ (salario * 0.05) + '\nNovo salário, após aumento R$' + reajuste.toFixed(2));
 			}
-		</script>	
+		</script>
 	</body>
 </html>

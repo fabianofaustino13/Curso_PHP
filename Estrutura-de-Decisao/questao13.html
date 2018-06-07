@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 13</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.*/
+			
+			alert ('Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.');
+
+			let dia_semana = parseInt(prompt('Informe um número de 1 à 7'));
+			
+			if (isNaN(dia_semana)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+
+			if (dia_semana < 1 || dia_semana > 7) {
+				alert('Informe um número de 1 à 7');
+				exit();
+			}
+			switch (dia_semana) {
+				case 1: 
+					alert('Domingo');
+					break;
+				case 2: 
+					alert('Segunda-feira');
+					break;
+				case 3: 
+					alert('Terça-feira');
+					break;
+				case 4: 
+					alert('Quarta-feira');
+					break;
+				case 5: 
+					alert('Quinta-feira');
+					break;
+				case 6: 
+					alert('Sexta-feira');
+					break;
+				case 7: 
+					alert('Sábado');
+					break;
+			}
+
+		</script>	
+	</body>
+</html>

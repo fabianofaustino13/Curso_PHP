@@ -5,25 +5,36 @@
 		<title>Questão 06</title>
 	</head>
 	<body>
-		<script type="text/javascript">
+<script type="text/javascript">
 			//Faça um Programa que leia três números e mostre o maior deles.
 			alert ('Faça um Programa que leia três números e mostre o maior deles.');
-			let numero1 = parseFloat(prompt('Informe o número 1'));
-			let numero2 = parseFloat(prompt('Informe o número 2'));
-			let numero3 = parseFloat(prompt('Informe o número 3'));
-
+			let numero1 = parseFloat(prompt('Informe o primeiro número'));
+			if (isNaN(numero1)) {
+				alert('O valor digitado para o PRIMEIRO número, deve ser número');
+				exit();
+			}
+			let numero2 = parseFloat(prompt('Informe o segundo número'));
+			if (isNaN(numero2)) {
+				alert('O valor digitado para o SEGUNDO número, deve ser número');
+				exit();
+			}
+			let numero3 = parseFloat(prompt('Informe o terceiro número'));
+			if (isNaN(numero3)) {
+				alert('O valor digitado para o TERCEIRO número, deve ser número');
+				exit();
+			}
 			if (numero1 >= numero2 && numero1 > numero3) {
-				alert('O número 1 é o maior ' + numero1 + '\nNúmero 1: ' + numero1 + '\nNúmero 2: ' + numero2 + '\nNúmero 3: ' + numero3);
+				alert('O PRIMEIRO número é o maior ' + numero1 + '\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
 			} 
 			else if (numero2 > numero1 && numero2 > numero3) {
-				alert('O número 2 é o maior ' + numero2 + '\nNúmero 1: ' + numero1 + '\nNúmero 2: ' + numero2 + '\nNúmero 3: ' + numero3);
+				alert('O SEGUNDO número é o maior ' + numero2 + '\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
 			}
 			else if (numero3 > numero1 || numero3 > numero2) {
-				alert('O número 3 é o maior ' + numero3 + '\nNúmero 1: ' + numero1 + '\nNúmero 2: ' + numero2 + '\nNúmero 3: ' + numero3);
+				alert('O TERCEIRO número é o maior ' + numero3 + '\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
 			}
 			else {
-				alert('Os números são iguais' + '\nNúmero 1: ' + numero1 + '\nNúmero 2: ' + numero2 + '\nNúmero 3: ' + numero3);
+				alert('Os números são iguais' + '\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
 			}
-		</script>	
+		</script>		
 	</body>
 </html>
