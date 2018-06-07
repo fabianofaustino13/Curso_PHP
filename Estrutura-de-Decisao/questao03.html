@@ -11,24 +11,16 @@
 			let sexo = prompt('Informe o sexo \n(F - Feminino M - Masculino)');
 			
 			switch (sexo) {
-				case 'F': 
+				case 'F': case 'f':
 					alert('Feminino!');
 					break;
 			
-				case 'M':
+				case 'M': case 'm':
 					alert('Masculino!');
 					break;
 
 				default:
-					if (sexo == 'f') {
-						alert('Feminino.');
-					}
-					else if (sexo == 'm'){
-						alert('Masculino.')
-					}
-					else {
-						alert('Sexo Inválido');
-					}
+					alert('Sexo Inválido');
 			}
 
 		</script>	

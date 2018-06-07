@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 04a</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//Faça um Programa que verifique se uma letra digitada é vogal ou consoante.
+			alert('Faça um Programa que verifique se uma letra digitada é vogal ou consoante.');
+			let letra1 = prompt('Informa uma letra');
+
+			let letra = letra1.toLowerCase();
+			
+			if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+				alert('A letra informada é uma VOGAL!');
+			}
+			else if (!isNaN(letra)) {
+				alert('A letra informada é um NÚMERO');
+			}
+			else {
+				alert('A letra informada é uma CONSOANTE!');
+			}
+		</script>	
+	</body>
+</html>

@@ -6,12 +6,45 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			//Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
+			/*Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.*/
 			alert ('Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.');
 			let produto1 = parseFloat(prompt('Informe o preço do primeiro produto'));
-			let produto2 = parseFloat(prompt('Informe o preço do segundo produto'));
-			let produto3 = parseFloat(prompt('Informe o preço do terceiro produto'));
+			if (isNaN(produto1)) {
+				alert('O valor digitado deve ser número');
+				exit();
+			}
 
+			let produto2 = parseFloat(prompt('Informe o preço do segundo produto'));
+			if (isNaN(produto2)) {
+				alert('O valor digitado deve ser número');
+				exit();
+			}
+
+			let produto3 = parseFloat(prompt('Informe o preço do terceiro produto'));
+			if (isNaN(produto3)) {
+				alert('O valor digitado deve ser número');
+				exit();
+			}
+
+			let opcao_compra;
+			let menor;
+
+			if (produto1 >= produto2) {
+				opcao_compra = 'Produto 2';
+				menor = produto2;
+			}
+			else {
+				opcao_compra = 'Produto 1';
+				menor = produto1;
+			}
+
+			if (produto3 <= menor) {
+				opcao_compra = 'Produto 3';
+				menor = produto3;
+			}
+			
+			alert('Produto mais barato: ' + opcao_compra + ' R$' + menor + '\nProduto 1 R$' + produto1 + '\nProduto 2 R$' + produto2 + '\nProduto 3 R$' + produto3);
+			/*
 			if (produto1 <= produto2 && produto1 < produto3) {
 				alert('O primeiro produto é o mais barato R$' + produto1 + '\nPrimeiro produto R$' + produto1 + '\nSegundo produto R$' + produto2 + '\nTerceiro produto R$' + produto3);
 			} 
@@ -24,6 +57,7 @@
 			else {
 				alert('Todos os produtos tem o mesmo preço\nPrimeiro produto R$' + produto1 + '\nSegundo produto R$' + produto2 + '\nTerceiro produto R$' + produto3);
 			}
+			*/
 		</script>	
 	</body>
 </html>

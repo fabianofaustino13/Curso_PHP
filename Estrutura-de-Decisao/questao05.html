@@ -6,27 +6,45 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			//Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar:
-			//A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
-			//A mensagem "Reprovado", se a média for menor do que sete;
-			//A mensagem "Aprovado com Distinção", se a média for igual a dez.
+			/*Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar:
+			A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+			A mensagem "Reprovado", se a média for menor do que sete;
+			A mensagem "Aprovado com Distinção", se a média for igual a dez.*/
 			alert ('Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar: ' +
 				'\nA mensagem "Aprovado", se a média alcançada for maior ou igual a sete;'+
 				'\nA mensagem "Reprovado", se a média for menor do que sete;'+
 				'\nA mensagem "Aprovado com Distinção", se a média for igual a dez.');
-			let nota1 = parseFloat(prompt('Informe a nota da avaliação 1'));
-			let nota2 = parseFloat(prompt('Informe a nota da avaliação 2'));
+			let nota1 = prompt('Informe a nota da avaliação 1');
+			if (isNaN(nota1)) {
+				alert('Nota 1 deve ser um número');
+				exit();
+			}
+			nota1 = parseFloat(nota1);
+			if (nota1 < 0 || nota1 > 10) {
+				alert('Nota 1 deve estar entre 0 e 10');
+				exit();
+			}
 
+			let nota2 = prompt('Informe a nota da avaliação 2');
+			if (isNaN(nota2)){
+				alert('Nota 2 deve ser um número');
+				exit();
+			}
+			nota2 = parseFloat(nota2);
+			if (nota2 < 0 || nota2 > 10) {
+				alert('Nota 2 deve estar entre 0 e 10');
+				exit();
+			}
+			
 			let media = (nota1 + nota2) / 2;
-
 			if (media == 10) {
-				alert('Aprovado com Distinção e sua média é: ' + media.toFixed(2) +'\nNota 1: '+ nota1 +'\nNota 2: '+ nota2);
+				alert('APROVADO com DISTINÇÃO e sua média é: ' + media.toFixed(2) +'\nNota 1: '+ nota1 +'\nNota 2: '+ nota2);
 			} 
 			else if (media < 7) {
-				alert('Reprovado com média ' + media.toFixed(2) +'\nNota 1: '+ nota1 +'\nNota 2: '+ nota2);
+				alert('REPROVADO com média ' + media.toFixed(2) +'\nNota 1: '+ nota1 +'\nNota 2: '+ nota2);
 			}
 			else {
-				alert('Aprovado com média: ' + media.toFixed(2) +'\nNota 1: '+ nota1 +'\nNota 2: '+ nota2);
+				alert('APROVADO com média: ' + media.toFixed(2) +'\nNota 1: '+ nota1 +'\nNota 2: '+ nota2);
 			}
 		</script>	
 	</body>

@@ -9,47 +9,55 @@
 			//Faça um Programa que leia três números e mostre o maior e o menor deles.
 			alert ('Faça um Programa que leia três números e mostre o maior e o menor deles.');
 			let numero1 = parseFloat(prompt('Informe o primeiro número'));
+			if (isNaN(numero1)) {
+				alert('O valor digitado deve ser número');
+				exit();
+			}
 			let numero2 = parseFloat(prompt('Informe o segundo número'));
+			if (isNaN(numero2)) {
+				alert('O valor digitado deve ser número');
+				exit();
+			}
 			let numero3 = parseFloat(prompt('Informe o terceiro número'));
+			if (isNaN(numero3)) {
+				alert('O valor digitado deve ser número');
+				exit();
+			}
 
-			let menor;
+			let menor, maior = 0;
 
 			if (numero1 >= numero2 && numero1 > numero3) {
-				alert('O primeiro é o maior ' + numero1);
+				maior = numero1;
 				if (numero2 <= numero3) {
 					menor = numero2;
-					alert('O segundo número é o menor ' + numero2 + '\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
 				}
 				else {
 					menor = numero3;
-					alert('O terceiro número é o menor ' + numero3 + '\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
 				}
 			} 
 			else if (numero2 > numero1 && numero2 > numero3) {
-				alert('O segundo é o maior ' + numero2 + '\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
+				maior = numero2;
 				if (numero1 <= numero3) {
 					menor = numero1;
-					alert('O primeiro número é o menor ' + numero1 + '\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
 				}
 				else {
 					menor = numero3;
-					alert('O terceiro número é o menor ' + numero3 + '\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
 				}
 			}
 			else if (numero3 > numero1 || numero3 > numero2) {
-				alert('O terceiro é o maior ' + numero3 + '\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
+				maior = numero3;
 				if (numero1 <= numero2) {
 					menor = numero1;
-					alert('O primeiro número é o menor ' + numero1 + '\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
 				}
 				else {
 					menor = numero2;
-					alert('O segundo número é o menor ' + numero2 + '\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
 				}
 			}
 			else {
-				alert('Os números são iguais' + '\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
+				alert('Os números são iguais' + '\n\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
+				exit();
 			}
+			alert('MAIOR ' + maior + '\nMENOR ' + menor + '\n\nPrimeiro: ' + numero1 + '\nSegundo: ' + numero2 + '\nTerceiro: ' + numero3);
 		</script>	
 	</body>
 </html>
