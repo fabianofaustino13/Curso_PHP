@@ -20,7 +20,12 @@
 
 			let salario = parseFloat(prompt('Informe o seu salário'));
 			
-			let reajuste;
+			if (isNaN(salario)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+
+			let reajuste = 0;
 
 			if (salario <= 280) {
 				reajuste = salario + (salario * 0.20);
