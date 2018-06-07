@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 19</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um Programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.*/
+			
+			alert ('Faça um Programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.');
+
+			let numero = parseInt(prompt('Informe um número menor que 1000'));
+
+			if (isNaN(numero)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+			else if (numero < 0 || numero >= 1000) {
+				alert('Número fora do intervalo');
+				exit();
+			}
+
+			alert('O número ' + numero + ' possui: \n' + parseInt(numero / 100) + ' centena(s)\n' + parseInt((numero % 100) / 10) + ' dezena(s)\n' + unidade + ' unidade(s)');
+
+		</script>	
+	</body>
+</html>

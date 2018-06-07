@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 17</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto.*/
+			
+			alert ('Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto.');
+
+			let ano = parseInt(prompt('Informe um ano'));
+
+			if (isNaN(ano)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+
+			if (((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0)){
+				alert('Ano ' + ano + ' é bissexto!');
+			}
+			else {
+				alert('Ano ' + ano + ' NÃO é bissexto!');
+			}
+
+		</script>	
+	</body>
+</html>

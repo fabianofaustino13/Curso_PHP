@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 17</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida.*/
+			
+			alert ('Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida.');
+
+			let data = prompt('Informe uma data [dd/mm/aaaa]');
+			
+			let dia, mes, ano = 0;
+			dia = data.substring(0,2);
+			mes = data.substring(3,5);
+			ano = data.substring(6,10);
+
+			if (isNaN(dia)) {
+				alert('Você não digitou uma data corretamente');
+				exit();
+			}
+			if (isNaN(mes)) {
+				alert('Você não digitou uma data corretamente');
+				exit();
+			}
+			if (isNaN(ano)) {
+				alert('Você não digitou uma data corretamente');
+				exit();
+			}
+
+			//alert('Dia ' + dia + ' mês ' + mes + ' ano ' + ano);
+
+			if (dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano < 1) {
+				alert('Não existe essa data ' + dia +'/' + mes + '/' + ano);
+				exit();	
+			}
+			else if ((mes == 2) && (dia < 30)) {
+				alert('Data válida ' + dia +'/' + mes + '/' + ano);
+				exit();		
+			}
+			else if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && (dia < 31)) {
+				alert('Data válida ' + dia +'/' + mes + '/' + ano);
+				exit();	
+			}
+			else if ((mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) && (dia <= 31)) {
+				alert('Data válida ' + dia +'/' + mes + '/' + ano);
+				exit();
+			}
+			else {
+				alert('Data inválida');
+				exit();
+			}
+
+		</script>	
+	</body>
+</html>
