@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 20</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um Programa para leitura de três notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e presentar:
+			A mensagem "Aprovado", se a média for maior ou igual a 7, com a respectiva média alcançada;
+			A mensagem "Reprovado", se a média for menor do que 7, com a respectiva média alcançada;
+			A mensagem "Aprovado com Distinção", se a média for igual a 10.*/
+			alert ('Faça um Programa para leitura de três notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e presentar: \nA mensagem "Aprovado", se a média for maior ou igual a 7, com a respectiva média alcançada;\nA mensagem "Reprovado", se a média for menor do que 7, com a respectiva média alcançada;\nA mensagem "Aprovado com Distinção", se a média for igual a 10.');
+			
+			let nota1 = parseFloat(prompt('Informe a nota da avaliação 1'));
+			if (isNaN(nota1)) {
+				alert('Nota 1 deve ser um número');
+				exit();
+			}
+			if (nota1 < 0 || nota1 > 10) {
+				alert('Nota 1 deve estar entre 0 e 10');
+				exit();
+			}
+
+			let nota2 = parseFloat(prompt('Informe a nota da avaliação 2'));
+			if (isNaN(nota2)){
+				alert('Nota 2 deve ser um número');
+				exit();
+			}
+			
+			if (nota2 < 0 || nota2 > 10) {
+				alert('Nota 2 deve estar entre 0 e 10');
+				exit();
+			}
+			
+			let nota3 = parseFloat(prompt('Informe a nota da avaliação 3'));
+			if (isNaN(nota3)){
+				alert('Nota 3 deve ser um número');
+				exit();
+			}
+			
+			if (nota3 < 0 || nota3 > 10) {
+				alert('Nota 3 deve estar entre 0 e 10');
+				exit();
+			}
+
+			let media = (nota1 + nota2 + nota3) / 3;
+			if (media == 10) {
+				alert('APROVADO com DISTINÇÃO e sua média é: ' + media.toFixed(2) +'\nNota 1: '+ nota1 +'\nNota 2: '+ nota2 +'\nNota 3: '+ nota3);
+			} 
+			else if (media < 7) {
+				alert('REPROVADO com média ' + media.toFixed(2) +'\nNota 1: '+ nota1 +'\nNota 2: '+ nota2 +'\nNota 3: '+ nota3);
+			}
+			else {
+				alert('APROVADO com média: ' + media.toFixed(2) +'\nNota 1: '+ nota1 +'\nNota 2: '+ nota2 +'\nNota 3: '+ nota3);
+			}
+		</script>	
+	</body>
+</html>

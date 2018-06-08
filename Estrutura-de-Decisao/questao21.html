@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 21</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um Programa para um caixa eletrônico. O programa deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O programa não deve se preocupar com a quantidade de notas existentes na máquina.
+			Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
+			Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.*/
+			alert ('Faça um Programa para um caixa eletrônico. O programa deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O programa não deve se preocupar com a quantidade de notas existentes na máquina..');
+			
+			let abastecimento = 1000; 
+			//parseFloat(prompt('Abastecendo o caixa. Digite o valor do abastecimento'));
+			
+			let saque = parseFloat(prompt('Informe o valor do saque'));
+			
+			if (isNaN(saque)) {
+				alert('Valor inválido, digite um número');
+				exit();
+			}
+			if (saque < 10) {
+				alert('Valor mínimo para saque é de R$10,00')
+				exit();
+			}
+			else if (saque > 600) {
+				alert('O limite máximo para saque é de R$600,00');
+				exit();
+			}
+			
+			let cem_reais, cinquenta_reais, dez_reais, cinco_reais, um_real = 0;
+
+			if (saque >= 100) {
+				cem_reais = parseInt(saque / 100);
+				cinquenta_reais = parseInt((saque - (cem_reais * 100)) / 50);
+				dez_reais = parseInt((saque - ((cem_reais * 100) + (cinquenta_reais * 50)))/10);
+				cinco_reais = parseInt((saque - ((cem_reais * 100) + (cinquenta_reais * 50) + (dez_reais * 10)))/5);
+				um_real = (saque - ((cem_reais * 100) + (cinquenta_reais * 50) + (dez_reais * 10) + (cinco_reais * 5)))
+			}
+			else {
+				cem_reais = 0;
+				cinquenta_reais = parseInt((saque - (cem_reais * 100)) / 50);
+				dez_reais = parseInt((saque - ((cem_reais * 100) + (cinquenta_reais * 50)))/10);
+				cinco_reais = parseInt((saque - ((cem_reais * 100) + (cinquenta_reais * 50) + (dez_reais * 10)))/5);
+				um_real = (saque - ((cem_reais * 100) + (cinquenta_reais * 50) + (dez_reais * 10) + (cinco_reais * 5)))
+			}
+			alert('Saque solicitado -> ' + saque +'\n\nNotas de R$100,00 -> ' + cem_reais + '\nNotas de R$50,00 -> ' + cinquenta_reais + '\nNotas de R$10,00 -> ' + dez_reais + '\nNotas de R$5,00 -> ' + cinco_reais + '\nNotas de R$1,00 -> ' + um_real);
+			
+		</script>	
+	</body>
+</html>

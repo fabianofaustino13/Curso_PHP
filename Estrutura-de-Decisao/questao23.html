@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 23</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um Programa que peça um número e informe se o número é inteiro ou decimal. Dica: utilize uma função de arredondamento.*/
+			alert ('Faça um Programa que peça um número e informe se o número é inteiro ou decimal. Dica: utilize uma função de arredondamento.');
+				
+			let numero = prompt('Informe um número');
+			
+			if (isNaN(numero)) {
+				alert('Valor inválido, digite um número');
+				exit();
+			}
+			
+
+			if (numero % 1 == 0) {
+				alert(numero + ' é inteiro!');
+			}
+			else {
+					alert(numero + ' é decimal!');
+			}
+			
+		</script>	
+	</body>
+</html>
