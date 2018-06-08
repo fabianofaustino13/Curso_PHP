@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 25</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+			"Telefonou para a vítima?"
+			"Esteve no local do crime?"
+			"Mora perto da vítima?"
+			"Devia para a vítima?"
+			"Já trabalhou com a vítima?" O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".*/
+			alert ('Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:');
+				
+			let pergunta1 = prompt('Telefonou para a vítima? [S/N]');
+			if (!isNaN(pergunta1)) {
+				alert('Valor inválido, digite S-SIM ou N-NÃO');
+				exit();
+			}
+			
+			let pergunta2 = prompt('Esteve no local do crime? [S/N]');
+			if (!isNaN(pergunta2)) {
+				alert('Valor inválido, digite S-SIM ou N-NÃO');
+				exit();
+			}
+
+			let pergunta3 = prompt('Mora perto da vítima? [S/N]');
+			if (!isNaN(pergunta3)) {
+				alert('Valor inválido, digite S-SIM ou N-NÃO');
+				exit();
+			}
+			
+			let pergunta4 = prompt('Devia para a vítima? [S/N]');
+			if (!isNaN(pergunta4)) {
+				alert('Valor inválido, digite S-SIM ou N-NÃO');
+				exit();
+			}
+
+			let pergunta5 = prompt('Já trabalhou com a vítima? [S/N]');
+			if (!isNaN(pergunta5)) {
+				alert('Valor inválido, digite S-SIM ou N-NÃO');
+				exit();
+			}
+			let opcao_sim = 0;
+			let opcao_nao = 0;
+//			alert('Sim1 = ' + opcao_sim);
+			if (pergunta1.toUpperCase() == 'S'){
+				opcao_sim++;
+			}
+			else {
+				opcao_nao++;
+			}
+
+			if (pergunta2.toUpperCase() == 'S'){
+				opcao_sim++;
+			}
+			else {
+				opcao_nao++;
+			}
+
+			if (pergunta3.toUpperCase() == 'S'){
+				opcao_sim++;
+			}
+			else {
+				opcao_nao++;
+			}
+			
+			if (pergunta4.toUpperCase() == 'S'){
+				opcao_sim++;
+			}
+			else {
+				opcao_nao++;
+			}
+
+			if (pergunta5.toUpperCase() == 'S'){
+				opcao_sim++;
+			}
+			else {
+				opcao_nao++;
+			}
+
+			if (opcao_sim < 2) {
+				alert('Inocente');
+			}
+			else if (opcao_sim < 3) {
+				alert('Suspeita');	
+			}
+			else if (opcao_sim < 5) {
+				alert('Cúmplice');
+			}
+			else {
+				alert('Assassino');
+			}
+
+		</script>	
+	</body>
+</html>
