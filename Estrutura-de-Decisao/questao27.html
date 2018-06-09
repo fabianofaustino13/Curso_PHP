@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Questão 25</title>
+		<title>Questão 27</title>
 	</head>
 	<body>
 		<script type="text/javascript">
@@ -11,56 +11,50 @@
 			Morango         R$ 2,50 por Kg          R$ 2,20 por Kg
 			Maçã            R$ 1,80 por Kg          R$ 1,50 por Kg
 			Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá ainda um desconto de 10% sobre este total. Escreva um algoritmo para ler a quantidade (em Kg) de morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.*/
-			alert ('Uma fruteira está vendendo frutas com a seguinte tabela de preços:');
+			alert ('Uma fruteira está vendendo frutas com a seguinte tabela de preços:\n                        Até 5 Kg           Acima de 5 Kg \nMorango      R$ 2,50 por Kg       R$ 2,20 por Kg \nMaçã            R$ 1,80 por Kg       R$ 1,50 por Kg');
 				
-			let combustivel = prompt('Qual combustível? A - álcool G - gasolina');
-			if (!isNaN(combustivel)) {
-				alert('Valor inválido, digite A - álcool G - gasolina');
+			let peso_morango = parseFloat(prompt('Informe a quantidade de kg de morango'));
+			if (isNaN(peso_morango)) {
+				alert('Valor inválido, valor digitado não era um número');
 				exit();
 			}
 			
-			let litros = parseFloat(prompt('Quantos litros? '));
-			if (isNaN(litros)) {
-				alert('Valor inválido, digite um número');
+			let peso_maca = parseFloat(prompt('Informe a quantidade de kg de maçã'));
+			if (isNaN(peso_maca)) {
+				alert('Valor inválido, valor digitado não era um número');
 				exit();
 			}
 
-			let valor = 0;
-			switch (combustivel.toUpperCase()) {
-				case 'A':
-					if (litros <= 20) {
-						valor = litros * (1.90 * 0.03);
-					}
-					else {
-						valor = litros * (1.90 * 0.05);
-					}
-					break;
+			let valor_morango = 2.50;
+			let valor_maca = 1.80;
 
-				case 'G':
-					if (litros <= 20) {
-						valor = litros * (2.50 * 0.04);
-					}
-					else {
-						valor = litros * (2.50 * 0.06);
-					}
-					break;
-				default:
-					alert('Combustível inválido');
-			}
+			valor_total = (valor_morango * peso_morango) + (valor_maca * peso_maca);
+			valor_original = valor_total;
+			valor_morango_original = valor_morango;
+			valor_maca_original = valor_maca;
 
-/*
-			combustivel = combustivel.toUpperCase();
-			if (combustivel.toUpperCase() == 'A') {
-				if
-			}
-			else if (combustivel.toUpperCase() == 'G') {
-
+			if (peso_morango <= 5) {
+				valor_morango = 2.50;
 			}
 			else {
-				alert('Combustível inválido');
+				valor_morango = 2.20;
 			}
-*/			
-			alert(combustivel + ' Litros: ' + litros + ' Total a pagar: ' + valor);
+			
+			if (peso_maca <= 5) {
+				valor_maca = 1.80;
+			}
+			else {
+				valor_maca = 1.50;
+			}
+
+			let total = (valor_morango * peso_morango) + (valor_maca * peso_maca);
+			if (((peso_morango + peso_maca) > 8) || (valor_total > 25)) {
+				total = total - (total * 0.10);
+				alert('Morango ' + peso_morango + 'kg -> R$' + (valor_morango * peso_morango).toFixed(2) + ' Valor sem desconto R$' + (valor_morango_original * peso_morango).toFixed(2) + '\nMaçã ' + peso_maca + 'kg -> R$' + (valor_maca * peso_maca).toFixed(2) + ' Valor sem desconto R$' + (valor_maca_original * peso_maca).toFixed(2) + '\nTotal a pagar com desconto de 10% R$' + total.toFixed(2));	
+			}
+			else {
+				alert('Morango ' + peso_morango + 'kg -> R$' + (valor_morango * peso_morango).toFixed(2) + ' Valor sem desconto R$' + (valor_morango_original * peso_morango).toFixed(2) + '\nMaçã ' + peso_maca + 'kg -> R$' + (valor_maca * peso_maca).toFixed(2) + ' Valor sem desconto R$' + (valor_maca_original * peso_maca).toFixed(2) + '\nTotal a pagar sem desconto de 10% R$' + total.toFixed(2));
+			}
 
 		</script>	
 	</body>
