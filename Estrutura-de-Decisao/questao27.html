@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 25</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Uma fruteira está vendendo frutas com a seguinte tabela de preços:
+			Até 5 Kg           Acima de 5 Kg
+			Morango         R$ 2,50 por Kg          R$ 2,20 por Kg
+			Maçã            R$ 1,80 por Kg          R$ 1,50 por Kg
+			Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá ainda um desconto de 10% sobre este total. Escreva um algoritmo para ler a quantidade (em Kg) de morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.*/
+			alert ('Uma fruteira está vendendo frutas com a seguinte tabela de preços:');
+				
+			let combustivel = prompt('Qual combustível? A - álcool G - gasolina');
+			if (!isNaN(combustivel)) {
+				alert('Valor inválido, digite A - álcool G - gasolina');
+				exit();
+			}
+			
+			let litros = parseFloat(prompt('Quantos litros? '));
+			if (isNaN(litros)) {
+				alert('Valor inválido, digite um número');
+				exit();
+			}
+
+			let valor = 0;
+			switch (combustivel.toUpperCase()) {
+				case 'A':
+					if (litros <= 20) {
+						valor = litros * (1.90 * 0.03);
+					}
+					else {
+						valor = litros * (1.90 * 0.05);
+					}
+					break;
+
+				case 'G':
+					if (litros <= 20) {
+						valor = litros * (2.50 * 0.04);
+					}
+					else {
+						valor = litros * (2.50 * 0.06);
+					}
+					break;
+				default:
+					alert('Combustível inválido');
+			}
+
+/*
+			combustivel = combustivel.toUpperCase();
+			if (combustivel.toUpperCase() == 'A') {
+				if
+			}
+			else if (combustivel.toUpperCase() == 'G') {
+
+			}
+			else {
+				alert('Combustível inválido');
+			}
+*/			
+			alert(combustivel + ' Litros: ' + litros + ' Total a pagar: ' + valor);
+
+		</script>	
+	</body>
+</html>
