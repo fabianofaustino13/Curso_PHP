@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 25</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+			Álcool:
+			até 20 litros, desconto de 3% por litro
+			acima de 20 litros, desconto de 5% por litro
+			Gasolina:
+			até 20 litros, desconto de 4% por litro
+			acima de 20 litros, desconto de 6% por litro Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 2,50 o preço do litro do álcool é R$ 1,90.*/
+			alert ('Um posto está vendendo combustíveis com a seguinte tabela de descontos: \nÁlcool: \naté 20 litros, desconto de 3% por litro	acima de 20 litros, desconto de 5% por litro NGasolina: \naté 20 litros, desconto de 4% por litro acima de 20 litros, desconto de 6% por litro. \nEscreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 2,50 o preço do litro do álcool é R$ 1,90.');
+				
+			let combustivel = prompt('Qual combustível? A - álcool G - gasolina');
+			if (!isNaN(combustivel)) {
+				alert('Valor inválido, digite A - álcool G - gasolina');
+				exit();
+			}
+			
+			let litros = parseFloat(prompt('Quantos litros? '));
+			if (isNaN(litros)) {
+				alert('Valor inválido, digite um número');
+				exit();
+			}
+
+			let valor = 0;
+			switch (combustivel.toUpperCase()) {
+				case 'A':
+					if (litros <= 20) {
+						valor = litros * (1.90 * 0.03);
+					}
+					else {
+						valor = litros * (1.90 * 0.05);
+					}
+					break;
+
+				case 'G':
+					if (litros <= 20) {
+						valor = litros * (2.50 * 0.04);
+					}
+					else {
+						valor = litros * (2.50 * 0.06);
+					}
+					break;
+				default:
+					alert('Combustível inválido');
+			}
+
+/*
+			combustivel = combustivel.toUpperCase();
+			if (combustivel.toUpperCase() == 'A') {
+				if
+			}
+			else if (combustivel.toUpperCase() == 'G') {
+
+			}
+			else {
+				alert('Combustível inválido');
+			}
+*/			
+			alert(combustivel + ' Litros: ' + litros + ' Total a pagar: ' + valor);
+
+		</script>	
+	</body>
+</html>
