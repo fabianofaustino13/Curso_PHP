@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 28</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*O Hipermercado Tabajara está com uma promoção de carnes que é imperdível. Confira:
+                               Até 5 Kg           Acima de 5 Kg
+			File Duplo      R$ 4,90 por Kg          R$ 5,80 por Kg
+			Alcatra         R$ 5,90 por Kg          R$ 6,80 por Kg
+			Picanha         R$ 6,90 por Kg          R$ 7,80 por Kg
+			Para atender a todos os clientes, cada cliente poderá levar apenas um dos tipos de carne da promoção, porém não há limites para a quantidade de carne por cliente. Se compra for feita no cartão Tabajara o cliente receberá ainda um desconto de 5% sobre o total a compra. Escreva um programa que peça o tipo e a quantidade de carne comprada pelo usuário e gere um cupom fiscal, contendo as informações da compra: tipo e quantidade de carne, preço total, tipo de pagamento, valor do desconto e valor a pagar.*/
+			alert ('O Hipermercado Tabajara está com uma promoção de carnes que é imperdível. \nConfira:            Até 5 Kg           Acima de 5 Kg			\nFile Duplo      R$ 4,90 por Kg          R$ 5,80 por Kg 			\nAlcatra           R$ 5,90 por Kg          R$ 6,80 por Kg			\nPicanha         R$ 6,90 por Kg          R$ 7,80 por Kg			\nPara atender a todos os clientes, cada cliente poderá levar apenas um dos tipos de carne da promoção, porém não há limites para a quantidade de carne por cliente. Se compra for feita no cartão Tabajara o cliente receberá ainda um desconto de 5% sobre o total a compra. Escreva um programa que peça o tipo e a quantidade de carne comprada pelo usuário e gere um cupom fiscal, contendo as informações da compra: tipo e quantidade de carne, preço total, tipo de pagamento, valor do desconto e valor a pagar.');
+				
+			let tipo_carne = parseFloat(prompt('Informe o tipo de carne: \n1 - Filé Duplo  2 - Alcatra  3 - Picanha'));
+			if (isNaN(tipo_carne)) {
+				alert('Valor inválido, valor digitado não era um número');
+				exit();
+			}
+			let peso_file_duplo, peso_alcatra, peso_picanha, valor, peso;
+			peso = parseFloat(prompt('Informe o peso'));
+			if (isNaN(peso)) {
+				alert('Valor inválido, valor digitado não era um número');
+				exit();
+			}
+			if (peso > 0) {
+				switch (tipo_carne) {
+				case 1: //Filé Duplo
+					if (peso > 5 && peso <= 5) {
+						valor = peso * 4.90;
+					}
+					else {
+						valor = peso * 5.80;	
+					}
+					tipo_carne = 'Filé Duplo';
+					break;
+				
+				case 2: //Alcatra
+					if (peso > 0 && peso <= 5) {
+						valor = peso * 5.90;
+					}
+					else {
+						valor = peso * 6.80;	
+					}
+					tipo_carne = 'Alcatra';
+					break;
+				
+				case 3: //Picanha
+					if (peso > 0 && peso <= 5) {
+						valor = peso * 6.90;
+					}
+					else {
+						valor = peso * 7.80;	
+					}
+					tipo_carne = 'Picanha';
+					break;
+				
+				default:
+					alert('Tipo de carne inválido');
+				}
+				
+				let cartão_tabajara = prompt('Pagamento com o cartão tabajara? [S - Sim / N - Não');
+				if (!isNaN(cartão_tabajara)) {
+					alert('Valor inválido, valor digitado é um número');
+					exit();
+				}
+
+				let desconto = 0;
+				if (cartão_tabajara.toUpperCase() == 'S') {
+					desconto = valor * 0.05;
+					cartão_tabajara = 'Cartão Tabajara';
+				}
+				else {
+				 	cartão_tabajara = 'Outro Cartão';
+				}
+
+				alert('Tipo de carne ' + tipo_carne + '\nQuantidade ' + peso.toFixed(3) + 'kg \nPagamento com ' + cartão_tabajara + '\nValor do total R$' + valor.toFixed(2) + '\nValor do desconto R$' + desconto.toFixed(2) + '\nValor a pagar R$' + (valor - desconto).toFixed(2));
+			}
+			else {
+				alert('Peso inválido');		
+			}
+			
+			
+		</script>	
+	</body>
+</html>
