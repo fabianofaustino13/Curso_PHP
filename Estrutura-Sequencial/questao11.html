@@ -10,7 +10,24 @@
 		//1 - o produto do dobro do primeiro com metade do segundo. 
 		//2 - a soma do triplo do primeiro com o terceiro.
 		//3 - o terceiro elevado ao cubo.
-			let 
+			let numero1 = parseInt(prompt('Informe um número inteiro'));
+			if (isNaN(numero1)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+			let numero2 = parseInt(prompt('Informe um número inteiro'));
+			if (isNaN(numero2)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+			let numero3 = parseFloat(prompt('Informe um número '));
+			if (isNaN(numero3)) {
+				alert('Você não digitou um número');
+				exit();
+			}
+
+			alert('O produto do dobro do primeiro com metade do segundo -> ' + ((numero1**2) * (numero2/2)) +'\nA soma do triplo do primeiro com o terceiro -> ' + ((numero1 * 3) + numero3) + '\nO terceiro elevado ao cubo -> ' + (numero3**3)
+				);
 		</script>	
 	</body>
 </html>

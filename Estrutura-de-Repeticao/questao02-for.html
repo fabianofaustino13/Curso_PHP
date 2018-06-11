@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 02 - For</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.*/
+			alert('Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.');
+			
+			for (let i = 0; i < 1; i++) {
+				let	nome = prompt('Digite um nome');
+				let senha = prompt('Digite a senha') 
+				if (nome == senha) {
+					alert('Erro!!!\nA senha não pode ser igual ao nome');
+					i--;
+				}
+			}
+		</script>	
+	</body>
+</html>

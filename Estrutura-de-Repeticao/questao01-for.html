@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 01 - For</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido*/
+			alert('Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido');
+			
+			for (let i = 0; i < 10; i++) {
+				var	nota = parseFloat(prompt('Digite uma nota ' + (i+1)));
+				if (nota >= 0 && nota <= 10) {
+					break;
+				}
+				else {
+					alert('Valor inválido! \nTentativa ' + (i+1));
+				}
+			}
+			alert ('Nota ' + nota);
+		</script>	
+	</body>
+</html>

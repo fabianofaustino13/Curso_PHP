@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 01 - While</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido*/
+			alert('Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido');
+			
+			do {
+				var	nota = parseFloat(prompt('Digite uma nota '));
+			} while (nota < 0 || nota > 10);
+			alert ('Nota ' + nota);
+		</script>	
+	</body>
+</html>

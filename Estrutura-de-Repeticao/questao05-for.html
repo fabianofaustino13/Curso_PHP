@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 05</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Supondo que a população de um país A seja da ordem de 80000 habitantes com uma taxa anual de crescimento de 3% e que a população de B seja 200000 habitantes com uma taxa de crescimento de 1.5%. Faça um programa que calcule e escreva o número de anos necessários para que a população do país A ultrapasse ou iguale a população do país B, mantidas as taxas de crescimento.
+			Altere o programa anterior permitindo ao usuário informar as populações e as taxas de crescimento iniciais. Valide a entrada e permita repetir a operação.*/
+
+			let anos, diferenca = 0;
+			let populacao_a = parseInt(prompt('Informe a população do país A'));
+			if (isNaN(populacao_a)) {
+				alert('Você não informou um número');
+				exit();
+			}
+			taxa_a = parseFloat(prompt('Informe a taxa de crescimento do país A'));
+			if (isNaN(taxa_a)) {
+				alert('Você não informou um número');
+				exit();			
+			}
+			let populacao_b = parseInt(prompt('Informe a população do país B'));
+			if (isNaN(populacao_b)) {
+				alert('Você não informou um número');
+				exit();
+			}
+			taxa_b = parseFloat(prompt('Informe a taxa de crescimento do país B'));
+			if (isNaN(taxa_b)) {
+				alert('Você não informou um número');
+				exit();
+			}
+			for (let i = 0; populacao_a < populacao_b; i++) {
+				populacao_a = populacao_a + (populacao_a * taxa_a);
+				populacao_b = populacao_b + (populacao_b * taxa_b);
+				anos = i;
+			}
+			alert(anos + ' anos para a População A ' + populacao_a.toFixed(0) + ' ultrapassar a População B ' + populacao_b.toFixed(0) + ' em ' + (populacao_a - populacao_b).toFixed(0) + ' habitantes');
+		</script>	
+	</body>
+</html>
