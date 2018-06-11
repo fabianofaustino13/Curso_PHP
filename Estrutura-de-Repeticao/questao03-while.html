@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Questão 03 - For</title>
+		<title>Questão 03 - While</title>
 	</head>
 	<body>
 		<script type="text/javascript">
@@ -15,33 +15,35 @@
 			alert('Faça um programa que leia e valide as seguintes informações:\nNome: maior que 3 caracteres;\nIdade: entre 0 e 150;\nSalário: maior que zero;\nSexo: f ou m;\nEstado Civil: s, c, v, d;');		
 			
 			let ehNomeValido = false;
-			for (let i = 0; !ehNomeValido; i++) {
+			let i = 0;
+			while (!ehNomeValido){
 				if (i > 0) {
 					var nome = prompt('O nome deve ter mais que 3 caracteres. \nDigite novamente o nome');	
 				}
 				else {
 					nome = prompt('Digite o nome');	
 				}
+				i++;
 				ehNomeValido = (nome.length > 3);
 			}
 			alert(nome);
 
 			let ehIdadeValida = false;
-			for (let i = 0; !ehIdadeValida; i++) {
-				var idade = parseInt(prompt('Sua idade'));
-				ehIdadeValida = (idade >=0 && idade <= 150);
-			}
-			alert(idade);
+			while (!ehIdadeValida) {
+			 	var idade = parseInt(prompt('Sua idade'));
+			 	ehIdadeValida = (idade >=0 && idade <= 150);
+			 }
+			 alert(idade);
 
 			let ehSexoValido = false;
-			for (let i = 0; !ehSexoValido; i++) {
+			while (!ehSexoValido) {
 				var sexo = prompt('Seu sexo').toUpperCase();
 				ehSexoValido = (sexo == 'M' || sexo == 'F');
 			}
 			alert(sexo);
 
 			let ehEstadoCivilValido = false;
-			for (let i = 0; !ehEstadoCivilValido; i++) {
+			while (!ehEstadoCivilValido) {
 				var estadoCivil = prompt('Seu estado civil').toUpperCase();
 				ehEstadoCivilValido = (estadoCivil == 'S' || estadoCivil == 'C' || estadoCivil == 'V' || estadoCivil == 'D');
 			}

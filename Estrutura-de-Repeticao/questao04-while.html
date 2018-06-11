@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Questão 04 - For</title>
+		<title>Questão 04 - While</title>
 	</head>
 	<body>
 		<script type="text/javascript">
@@ -11,10 +11,10 @@
 			let populacao_a = 80000;
 			let populacao_b = 200000;
 			let anos = 0; 
-			for (let i = 0; populacao_a < populacao_b; i++) {
+			while (populacao_a < populacao_b) {
 				populacao_a = populacao_a * 1.03;
 				populacao_b = populacao_b * 1.015;
-				anos = i;
+				anos ++;
 			}
 			alert(anos + ' anos para a População A ' + populacao_a.toFixed(0) + ' ultrapassar a População B ' + populacao_b.toFixed(0) + ' em ' + (populacao_a - populacao_b).toFixed(0)  + ' habitantes');
 		</script>	

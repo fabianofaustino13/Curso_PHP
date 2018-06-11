@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 12</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um programa que receba dois números inteiros e gere os números inteiros que estão no intervalo compreendido por eles.*/
+			let numeroValido = false;
+			while (!numeroValido) {
+			 	var numero = parseInt(prompt('Informe um número para a tabuada'));
+			 	numeroValido = (numero > 0 && numero <= 10);
+			}
+			for (let i = 1; i <= 10; i++) {
+				document.write(numero + 'x' + i + ' = ' + (i * numero) + ' <br> ');		
+			}
+		</script>	
+	</body>
+</html>
