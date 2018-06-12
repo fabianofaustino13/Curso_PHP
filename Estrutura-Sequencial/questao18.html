@@ -20,11 +20,14 @@
 				velocidade_valida = (!isNaN(velocidade));	
 			} while (!velocidade_valida);
             
-            tamanho = tamanho * 1024; 
-            velocidade = (velocidade) /8;
-            let tempo = (velocidade/tamanho);
+            tamanho = tamanho; 
+            velocidade = (velocidade*1024) /8;
+			let tempo = (tamanho / (velocidade/1024));
+			let horas = tempo / 3600;
+			let minutos = (tempo - ((Math.trunc(horas))*3600)) / 60;
+			let segundos = tempo % 60;
 
-            alert('O tempo estimado é ' + tempo);
+            alert('Tamanho do arquivo ' + tamanho + 'Mb \nVelocidade ' + velocidade + 'kbps \nO tempo estimado é ' + tempo + 's ou ' + Math.trunc(horas) + 'h:' + Math.trunc(minutos) + 'm:'+segundos+'s');
 		</script>	
 	</body>
 </html>

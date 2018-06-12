@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Sequencial - Questão 17</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um Programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 6 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00 ou em galões de 3,6 litros, que custam R$ 25,00.
+            Informe ao usuário as quantidades de tinta a serem compradas e os respectivos preços em 3 situações:
+            comprar apenas latas de 18 litros;
+            comprar apenas galões de 3,6 litros;
+            misturar latas e galões, de forma que o preço seja o menor. Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias. */
+			
+            let metro_valido = false;
+			do {
+				var metro = parseFloat(prompt('Informe o metro quadrado a ser pintado'));
+				metro_valido = (!isNaN(metro));	
+			} while (!metro_valido);
+            
+            let metro_por_litro = 6;
+            let metro_galao18 = 18 * metro_por_litro;
+            let metro_galao3 = 3.6 * metro_por_litro;
+            let valor_galao18 = 80;
+            let valor_galao3 = 25;
+            let custo = 0;
+            let galoes_18l = 0;
+            let galoes_3l = 0;
+            alert('1 Galão de 18L de tinta, pinta até ' + metro_galao18 + 'm² \n1 Galão de 3.5L de tinta, pinta até ' + metro_galao3 + 'm²');
+            if (metro % metro_galao18 == 0) {
+               galoes_18l = Math.trunc(metro / metro_galao18); 
+                let teste = (metro / metro_galao18).toFixed(0); 
+                custo = galoes_18l * valor_galao18;
+                alert('Aqui 1 -> ' + galoes_18l + ' galões \nCusto ' + custo + '\nTeste ' + teste);
+            }
+            else if (metro % metro_galao3 == 0) {
+                galoes_3l = Math.trunc(metro / metro_galao3); 
+                custo = galoes_3l * valor_galao3;
+                alert('Aqui 2 -> ' + galoes_3l + ' galões \nCusto ' + custo);
+            }
+
+            if (metro < metro_galao18) {
+                galoes_18l = Math.trunc(metro / metro_galao18); 
+                if (galoes_18l < 1) {
+                    galoes_18l = 1;
+                    custo = galoes_18l * valor_galao18;
+                }
+                alert('Aqui 3 -> ' + galoes_18l + ' galões \nCusto ' + custo + '\nTeste ');
+            }
+            else {
+                galoes_18l = Math.trunc(metro/metro_galao18);
+                let teste = (metro/metro_galao18).toFixed(0);
+                custo = galoes_18l * 80;
+                alert('Aqui 4 -> ' + galoes_18l + ' galões \nCusto ' + custo + '\nTeste '+ teste);
+            }
+            alert('Somente latas de 18L pintam até ' + metro_galao18 + 'm²\nSerão necessários '+ galoes_18l + ' galão(ões) \nSomente latas de 3.5L pintam até ' + metro_galao3 + 'm² \n'+ custo.toFixed(2));
+		</script>	
+	</body>
+</html>

@@ -14,36 +14,27 @@
 				metro_valido = (!isNaN(metro));	
 			} while (!metro_valido);
             
-            let litro = 18 / 3;
+            let metro_por_litro = 3;
+            let metro_galao18 = 18 * metro_por_litro;
             let custo = 0;
-            let galoes = 0;
-            if (metro % 6 == 0) {
-                custo = (metro / 6) * 80;
-               // alert('Aqui 1 -> ' + galoes);
-                galoes = (metro/6);
+            let galoes_18l = 0;
+            alert('1 Galão de 18L de tinta, pinta até ' + metro_galao18 + 'm²');
+            if (metro % metro_galao18 == 0) {
+                galoes_18l = Math.trunc(metro / metro_galao18); 
+                custo = galoes_18l * 80;
+            }
+            else if (metro < metro_galao18) {
+                galoes_18l = Math.trunc(metro / metro_galao18); 
+                if (galoes_18l < 1) {
+                    galoes_18l = 1;
+                    custo = galoes_18l * 80;
+                }
             }
             else {
-                if (metro >= 6) {
-                    if ((metro / 6) %2 == 0) {
-                        custo = (metro/6) * 80;
-                        galoes = (metro/6);
-                        //alert('Aqui 2 -> ' +galoes);
-                    }
-                    else {
-                        galoes = ((metro/6) + 1).toFixed(0);
-                        custo = galoes * 80;
-                        //alert('Aqui 3 -> ' +galoes );
-                    }
-                }
-                else {
-                    custo = 1 * 80;
-                    galoes = 1;
-                   // alert('Aqui 4 -> ' +galoes);
-                }
-                
+                galoes_18l = Math.trunc(metro/metro_galao18);
+                custo = galoes_18l * 80;
             }
-            
-            alert('1 Galarão de 18L de tinta, pinta até ' + litro + 'm² \nValor a pagar R$'+ custo.toFixed(2) + '\nGalões '+ galoes);
+            alert('1 Galão de 18L de tinta, pinta até ' + metro_galao18 + 'm² \nSerão necessários ' + galoes_18l + ' galões para pintar os ' + metro + 'm² \nValor a pagar R$'+ custo.toFixed(2));
 		</script>	
 	</body>
 </html>
