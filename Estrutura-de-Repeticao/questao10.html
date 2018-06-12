@@ -9,10 +9,31 @@
 			/*Faça um programa que receba dois números inteiros e gere os números inteiros que estão no intervalo compreendido por eles.*/
 			let numero1 = parseInt(prompt('Informe o primeiro número inteiro'));
 			let numero2 = parseInt(prompt('Informe o segundo número inteiro'));
-			
-			for (let i = (numero1+1); i < numero2; i++) {
-				document.write(i + ' - ');
+			let numeros = '';
+			if (numero1 <= numero2) {
+				for (let i = (numero1+1); i < numero2; i++) {
+					if (i == (numero2-1)) {
+						numeros +=i;	
+					}
+					else {
+						numeros += i + ' - ';
+					}
+				}	
 			}
+			else {
+				for (let i = (numero1-1); i > numero2; i--) {
+					if (i == (numero2+1)) {
+						numeros += i;
+					}
+					else{
+						numeros += i + ' - ';
+					}
+					
+					
+				}
+			}
+			
+			alert('O intervado entre os números digitados são: ' + numeros);
 		</script>	
 	</body>
 </html>

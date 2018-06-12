@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Sequencial - Questão 16</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total. */
+			
+            let metro_valido = false;
+			do {
+				var metro = parseFloat(prompt('Informe o metro quadrado a ser pintado'));
+				metro_valido = (!isNaN(metro));	
+			} while (!metro_valido);
+            
+            let litro = 18 / 3;
+            let custo = 0;
+            let galoes = 0;
+            if (metro % 6 == 0) {
+                custo = (metro / 6) * 80;
+               // alert('Aqui 1 -> ' + galoes);
+                galoes = (metro/6);
+            }
+            else {
+                if (metro >= 6) {
+                    if ((metro / 6) %2 == 0) {
+                        custo = (metro/6) * 80;
+                        galoes = (metro/6);
+                        //alert('Aqui 2 -> ' +galoes);
+                    }
+                    else {
+                        galoes = ((metro/6) + 1).toFixed(0);
+                        custo = galoes * 80;
+                        //alert('Aqui 3 -> ' +galoes );
+                    }
+                }
+                else {
+                    custo = 1 * 80;
+                    galoes = 1;
+                   // alert('Aqui 4 -> ' +galoes);
+                }
+                
+            }
+            
+            alert('1 Galarão de 18L de tinta, pinta até ' + litro + 'm² \nValor a pagar R$'+ custo.toFixed(2) + '\nGalões '+ galoes);
+		</script>	
+	</body>
+</html>

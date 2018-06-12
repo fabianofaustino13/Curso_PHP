@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Sequencial - Questão 14</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*João Papo-de-Pescador, homem de bem, comprou um microcomputador para controlar o rendimento diário de seu trabalho. 
+            Toda vez que ele traz um peso de peixes maior que o estabelecido pelo regulamento de pesca do estado de São Paulo 
+            (50 quilos) deve pagar uma multa de R$ 4,00 por quilo excedente. João precisa que você faça um programa que leia a 
+            variável peso (peso de peixes) e calcule o excesso. Gravar na variável excesso a quantidade de quilos além do limite 
+            e na variável multa o valor da multa que João deverá pagar. Imprima os dados do programa com as mensagens adequadas. */
+			
+            let peso_valido = false;
+			do {
+				var peso = parseFloat(prompt('Informe a quantidade de peixe em kg'));
+				peso_valido = (!isNaN(peso));	
+			} while (!peso_valido);
+            
+            let multa = 0;
+            let excedente = 0;
+            if (peso >=50) {
+                excedente = peso - 50;
+                multa = 4 * excedente;
+            }         
+            
+            alert('Hoje foi pescado ' + peso.toFixed(2) + 'kg \nPeso excedente ' + excedente + 'kg \nMulta R$' + multa.toFixed(2));
+		</script>	
+	</body>
+</html>

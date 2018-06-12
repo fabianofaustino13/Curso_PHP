@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Sequencial - Questão 15</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. 
+            Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o 
+            Imposto de Renda, 8% para o INSS e 5% para o sindicato, faça um programa que nos dê:
+            salário bruto.
+            quanto pagou ao INSS.
+            quanto pagou ao sindicato.
+            o salário líquido.
+            calcule os descontos e o salário líquido, conforme a tabela abaixo:
+            + Salário Bruto : R$
+            - IR (11%) : R$
+            - INSS (8%) : R$
+            - Sindicato ( 5%) : R$
+            = Salário Liquido : R$ */
+			
+            let valor_hora_valido = false;
+			do {
+				var valor_hora = parseFloat(prompt('Informe o valor da hora trabalhada'));
+				valor_hora_valido = (!isNaN(valor_hora));	
+			} while (!valor_hora_valido);
+
+            let num_hora_valido = false;
+			do {
+				var num_hora = parseFloat(prompt('Informe o valor da hora trabalhada'));
+				num_hora_valido = (!isNaN(num_hora));	
+			} while (!num_hora_valido);
+            
+            let salario_bruto = (valor_hora * num_hora).toFixed(2);
+            let irpf = (salario_bruto * 1.11) - salario_bruto; //Desconto de 11%
+            let inss = (salario_bruto * 1.08) - salario_bruto; //Desconto de 08%
+            let sindicato = (salario_bruto * 1.05) - salario_bruto; //Desconto de 05%
+            alert('+ Salário bruto R$' + salario_bruto + 
+            '\n- IR (11%) R$'+ irpf.toFixed(2) + '\n- INSS (8%) R$' + inss.toFixed(2) + '\n- Sindicato (5%) R$' + sindicato.toFixed(2) + 
+            '\n= Salário Líquido R$' +(salario_bruto - (irpf+inss+sindicato)).toFixed(2));
+		</script>	
+	</body>
+</html>

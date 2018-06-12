@@ -6,15 +6,17 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			/*Faça um programa que receba dois números inteiros e gere os números inteiros que estão no intervalo compreendido por eles.*/
+			/*Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro entre 1 a 10. O usuário deve informar de qual numero ele deseja ver a tabuada.*/
 			let numeroValido = false;
 			while (!numeroValido) {
 			 	var numero = parseInt(prompt('Informe um número para a tabuada'));
 			 	numeroValido = (numero > 0 && numero <= 10);
 			}
+			let numeros = '';
 			for (let i = 1; i <= 10; i++) {
-				document.write(numero + 'x' + i + ' = ' + (i * numero) + ' <br> ');		
+				numeros += numero + 'x' + i + ' = ' + (i * numero) + '\n';
 			}
+			alert('Tabuada de ' + numero + '\n' + numeros);
 		</script>	
 	</body>
 </html>

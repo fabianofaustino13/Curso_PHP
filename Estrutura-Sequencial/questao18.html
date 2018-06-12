@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Sequencial - Questão 18</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps), calcule e informe o tempo aproximado de download do arquivo usando este link (em minutos). */
+			
+            let tamanho_valido = false;
+			do {
+				var tamanho = parseFloat(prompt('Informe o tamanho do arquivo a ser baixado em MB'));
+				tamanho_valido = (!isNaN(tamanho));	
+			} while (!tamanho_valido);
+            
+            let velocidade_valida = false;
+            do {
+				var velocidade = parseFloat(prompt('Informe a velocidade da sua Internet em Mbps'));
+				velocidade_valida = (!isNaN(velocidade));	
+			} while (!velocidade_valida);
+            
+            tamanho = tamanho * 1024; 
+            velocidade = (velocidade) /8;
+            let tempo = (velocidade/tamanho);
+
+            alert('O tempo estimado é ' + tempo);
+		</script>	
+	</body>
+</html>
