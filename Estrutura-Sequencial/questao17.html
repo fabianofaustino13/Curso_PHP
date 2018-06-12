@@ -20,40 +20,59 @@
             
             let metro_por_litro = 6;
             let metro_galao18 = 18 * metro_por_litro;
-            let metro_galao3 = 3.6 * metro_por_litro;
-            let valor_galao18 = 80;
-            let valor_galao3 = 25;
-            let custo = 0;
+            let metro_galao3 = 3.5 * metro_por_litro;
+            let custo_galao18l = 0;
+            let custo_galao3l = 0;
             let galoes_18l = 0;
             let galoes_3l = 0;
-            alert('1 Galão de 18L de tinta, pinta até ' + metro_galao18 + 'm² \n1 Galão de 3.5L de tinta, pinta até ' + metro_galao3 + 'm²');
+            //alert('1 Galão de 18L de tinta, pinta até ' + metro_galao18 + 'm²');
             if (metro % metro_galao18 == 0) {
-               galoes_18l = Math.trunc(metro / metro_galao18); 
-                let teste = (metro / metro_galao18).toFixed(0); 
-                custo = galoes_18l * valor_galao18;
-                alert('Aqui 1 -> ' + galoes_18l + ' galões \nCusto ' + custo + '\nTeste ' + teste);
+                galoes_18l = Math.trunc(metro / metro_galao18);
+                custo_galao18l = galoes_18l * 80;
             }
-            else if (metro % metro_galao3 == 0) {
-                galoes_3l = Math.trunc(metro / metro_galao3); 
-                custo = galoes_3l * valor_galao3;
-                alert('Aqui 2 -> ' + galoes_3l + ' galões \nCusto ' + custo);
-            }
-
-            if (metro < metro_galao18) {
-                galoes_18l = Math.trunc(metro / metro_galao18); 
-                if (galoes_18l < 1) {
-                    galoes_18l = 1;
-                    custo = galoes_18l * valor_galao18;
-                }
-                alert('Aqui 3 -> ' + galoes_18l + ' galões \nCusto ' + custo + '\nTeste ');
+            else if (metro < metro_galao18) {
+                galoes_18l = (Math.trunc(metro / metro_galao18)) + 1;
+                custo_galao18l = galoes_18l * 80;
             }
             else {
-                galoes_18l = Math.trunc(metro/metro_galao18);
-                let teste = (metro/metro_galao18).toFixed(0);
-                custo = galoes_18l * 80;
-                alert('Aqui 4 -> ' + galoes_18l + ' galões \nCusto ' + custo + '\nTeste '+ teste);
+                galoes_18l = (Math.trunc(metro / metro_galao18)) + 1;
+                custo_galao18l = galoes_18l * 80;
             }
-            alert('Somente latas de 18L pintam até ' + metro_galao18 + 'm²\nSerão necessários '+ galoes_18l + ' galão(ões) \nSomente latas de 3.5L pintam até ' + metro_galao3 + 'm² \n'+ custo.toFixed(2));
+
+            if (metro % metro_galao3 == 0) {
+                galoes_3l = Math.trunc(metro / metro_galao3);
+                custo_galao3l = galoes_3l * 25;
+            }
+            else if (metro < metro_galao3) {
+                galoes_3l = (Math.trunc(metro / metro_galao3)) + 1;
+                custo_galao3l = galoes_3l * 25;
+            }
+            else {
+                galoes_3l = (Math.trunc(metro / metro_galao3)) + 1;
+                custo_galao3l = galoes_3l * 25;
+            }
+            let metros_juntos = metro_galao18 + metro_galao3;
+            let galoes_juntos = 0
+            let custo_juntos = (80 + 25) - ((80+25) * 0.10);
+            //alert('Custo juntos com desconto de 10% ' + custo_juntos.toFixed(2));
+            if (metro % metros_juntos == 0) {
+                galoes_juntos = Math.trunc(metro / metros_juntos);
+                custo_juntos = galoes_juntos * custo_juntos;
+            }
+            else if (metro < metros_juntos) {
+                galoes_juntos = (Math.trunc(metro / metros_juntos)) + 1;
+                custo_juntos = galoes_juntos * custo_juntos;
+            }
+            else {
+                galoes_juntos = (Math.trunc(metro / metros_juntos)) + 1;
+                custo_juntos = galoes_juntos * custo_juntos;
+            }
+
+            alert('1 Galão de 18L de tinta, pinta até ' + metro_galao18 + 'm² \nSerão necessários ' + galoes_18l + ' galão(ões) para pintar os ' + metro + 'm² \nValor a pagar R$'+ custo_galao18l.toFixed(2) + '\n\n1 Galão de 3.5L de tinta, pinta até ' + metro_galao3 + 'm² \nSerão necessários ' + galoes_3l + ' galão(ões) para pintar os ' + metro + 'm² \nValor a pagar R$'+ custo_galao3l.toFixed(2)
+            + '\n\n1 Galão de 18L + 1 galão de 3.5L de tinta, pintam até ' + metros_juntos + 'm² \nSerão necessários ' + galoes_juntos + ' galão(ões) para pintar os ' + metro + 'm² \nValor a pagar R$'+ custo_juntos.toFixed(2)
+            
+            );
+     
 		</script>	
 	</body>
 </html>

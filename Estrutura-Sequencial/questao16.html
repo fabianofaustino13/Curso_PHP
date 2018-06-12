@@ -24,17 +24,14 @@
                 custo = galoes_18l * 80;
             }
             else if (metro < metro_galao18) {
-                galoes_18l = Math.trunc(metro / metro_galao18); 
-                if (galoes_18l < 1) {
-                    galoes_18l = 1;
-                    custo = galoes_18l * 80;
-                }
-            }
-            else {
-                galoes_18l = Math.trunc(metro/metro_galao18);
+                galoes_18l = (Math.trunc(metro / metro_galao18)) + 1;
                 custo = galoes_18l * 80;
             }
-            alert('1 Galão de 18L de tinta, pinta até ' + metro_galao18 + 'm² \nSerão necessários ' + galoes_18l + ' galões para pintar os ' + metro + 'm² \nValor a pagar R$'+ custo.toFixed(2));
+            else {
+                galoes_18l = (Math.trunc(metro / metro_galao18)) + 1;
+                custo = galoes_18l * 80;
+            }
+            alert('1 Galão de 18L de tinta, pinta até ' + metro_galao18 + 'm² \nSerão necessários ' + galoes_18l + ' galão(ões) para pintar os ' + metro + 'm² \nValor a pagar R$'+ custo.toFixed(2));
 		</script>	
 	</body>
 </html>
