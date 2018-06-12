@@ -2,18 +2,16 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Questão 06</title>
+		<title>Estrutura de Repetição - Questão 06</title>
 	</head>
 	<body>
 		<script type="text/javascript">
 			/*Faça um programa que imprima na tela os números de 1 a 20, um abaixo do outro. Depois modifique o programa para que ele mostre os números um ao lado do outro.*/
-			//let numeros = [];
+			let numeros = '';
 			for (let i = 1; i <= 20; i++) {
-				document.write(i + "<br>");
+				numeros += i + '\n';
 			}
-			for (let i = 1; i <= 20; i++) {
-				document.write(i + ' ');
-			}	
+			alert(numeros);
 		</script>	
 	</body>
 </html>
