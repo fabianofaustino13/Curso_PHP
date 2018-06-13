@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Lista - Questão 05</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Faça um Programa que leia 20 números inteiros e armazene-os num vetor. Armazene os números pares no vetor PAR e os números IMPARES no vetor impar. Imprima os três vetores.*/
+            let par = [];
+            let impar = [];
+            let numero = [];
+            let j = 0; 
+            let k = 0;
+            for (let i = 0; i < 5; i++) {
+                let numero_valido = false;
+                do {
+                    numero[i] = parseInt(prompt('Informe o número ' + (i+1)));
+                    numero_valido = (!isNaN(numero[i]));	
+                } while (!numero_valido);
+            
+                if (numero[i] % 2 == 0) {
+                    //par += numero[i] + ', ';
+                    par[j] = numero[i];
+                    j++;
+                }
+                else {
+                    //impar += numero[i] + ', ';
+                    impar[k] = numero[i];
+                    k++;
+                }
+            }
+            alert('Números digitados: '+ numero + '\nPar > ' + par + '\nÍmpar > ' + impar);
+		</script>	
+	</body>
+</html>

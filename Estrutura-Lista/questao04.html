@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Estrutura Lista - Questão 03</title>
+		<title>Estrutura Lista - Questão 04</title>
 	</head>
 	<body>
         <script type="text/javascript">
@@ -10,14 +10,25 @@
 			let nome = [];
             let vogais = 0;
             let consoantes = 0;
+            let numeros = 0;
+            let espaco = 0;
             let palavra = prompt('Informe o nome');
             nome = palavra.toUpperCase();
             for (let i = 0; i < palavra.length; i++) {
                 if (nome[i] == 'A' || nome[i] == 'E' || nome[i] == 'I' || nome[i] == 'O' || nome[i] == 'U') {
                     vogais ++;
                 }
+                else if (palavra[i] >= '0'  && palavra[i] <= 9){
+                     numeros ++;
+			    }
+                else if (palavra[i] == ' ') {
+                    espaco ++;
+                }
+                else {
+                    consoantes ++;
+                }
             }
-            alert('A palavra digitada: '+ palavra + '\nNúmero de vogais ' + vogais + '\nNúmero de consoantes ' + ((palavra.length) -vogais));
+            alert('A palavra digitada: '+ palavra + '\nNúmero de vogais ' + vogais + '\nNúmero de consoantes ' + consoantes + '\nNúmero de números '+ numeros + '\nNúmero de espaços ' + espaco);
 		</script>	
 	</body>
 </html>
