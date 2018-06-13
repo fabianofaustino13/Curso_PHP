@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Lista - Questão 03</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Faça um Programa que leia um vetor de 10 caracteres, e diga quantas consoantes foram lidas. Imprima as consoantes.*/
+			let nome = [];
+            let vogais = 0;
+            let consoantes = 0;
+            let palavra = prompt('Informe o nome');
+            nome = palavra.toUpperCase();
+            for (let i = 0; i < palavra.length; i++) {
+                if (nome[i] == 'A' || nome[i] == 'E' || nome[i] == 'I' || nome[i] == 'O' || nome[i] == 'U') {
+                    vogais ++;
+                }
+            }
+            alert('A palavra digitada: '+ palavra + '\nNúmero de vogais ' + vogais + '\nNúmero de consoantes ' + ((palavra.length) -vogais));
+		</script>	
+	</body>
+</html>
