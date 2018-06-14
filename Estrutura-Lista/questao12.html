@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Lista - Questão 08</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Foram anotadas as idades e alturas de 30 alunos. Faça um Programa que determine quantos alunos com mais de 13 anos possuem altura inferior à média de altura desses alunos.*/
+			let idade = new Array(4);
+            let altura = new Array(idade.length);
+            let soma_altura = 0;
+            for (let i = 0; i < idade.length; i++) {
+                let idade_valida = false;
+                do {
+                    idade[i] = parseInt(prompt('Informe a idade ' + (i+ 1)));
+                    idade_valida = (!isNaN(idade[i]));	
+                } while (!idade_valida);
+
+                let altura_valida = false;
+                do {
+                    altura[i] = parseFloat(prompt('Informe a altura da idade ' + (i+ 1)));
+                    altura_valida = (!isNaN(altura[i]));	
+                } while (!altura_valida);
+                soma_altura += altura[i];
+               // debugger;
+            }
+            let maior = 0;
+            for (let i = 0; i < idade.length; i++ ) {
+                if (idade[i] > 13 && altura[i] >= (soma_altura/idade.length)) {
+                    maior ++;
+                    debugger;
+                }
+            }
+            alert('Em ordem digitada \nIdade: ' + idade + '\nAltura: ' + altura + '\n\nMédia da altura: ' + (soma_altura/idade.length).toFixed(2) + '\nTotal maior ' + maior);
+		</script>	
+	</body>
+</html>
