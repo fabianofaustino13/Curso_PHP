@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Lista - Questão 10</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Altere o programa anterior, intercalando 3 vetores de 10 elementos cada.*/
+			let numeros_a = new Array(2);
+            let numeros_b = new Array(numeros_a.length);
+            let numeros_c = new Array(numeros_a.length);
+            let numeros_d = new Array(numeros_a.length * 3);            
+            for (let i = 0; i < numeros_a.length; i++) {
+                let numeros_a_valido = false;
+                do {
+                    numeros_a[i] = parseInt(prompt('Informe o número ' + (i+ 1) + ' do vetor A'));
+                    numeros_a_valido = (!isNaN(numeros_a[i]));	
+                } while (!numeros_a_valido);
+            }
+
+            for (let i = 0; i < numeros_b.length; i++) {
+                let numeros_b_valido = false;
+                do {
+                    numeros_b[i] = parseInt(prompt('Informe o número ' + (i+ 1) + ' do vetor B'));
+                    numeros_b_valido = (!isNaN(numeros_b[i]));	
+                } while (!numeros_b_valido);
+            }
+            
+            for (let i = 0; i < numeros_c.length; i++) {
+                let numeros_c_valido = false;
+                do {
+                    numeros_c[i] = prompt('Informe um nome ' + (i+ 1) + ' do vetor C');
+                    numeros_c_valido = (isNaN(numeros_c[i]));	
+                } while (!numeros_c_valido);
+            }
+
+            let index_a = 0, index_b = 0, index_c = 0;
+            for (let i = 0; i < numeros_d.length; i++) {
+                if (i % 3 == 0) {
+                    numeros_d[i] = numeros_a[index_a];
+                    index_a ++;
+                    //debugger;
+                }
+                else if (i % 3 == 1) {
+                    numeros_d[i] = numeros_b[index_b];
+                    index_b ++;       
+                    //debugger;
+                }
+                else {
+                    numeros_d[i] = numeros_c[index_c];
+                    index_c ++;
+                    //debugger;
+                }
+            }
+            alert('Números do vetor A: ' + numeros_a + '\nNúmeros do vetor B: ' + numeros_b + '\nNúmeros do vetor C: ' + numeros_c +'\nVetores intercalados: ' + numeros_d);
+		</script>	
+	</body>
+</html>

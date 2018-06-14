@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Lista - Questão 09</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Faça um Programa que leia um vetor A com 10 números inteiros, calcule e mostre a soma dos quadrados dos elementos do vetor.*/
+			let numeros = new Array(2);
+            let soma = 0;
+            let numeros2 = [];
+            for (let i = 0; i < numeros.length; i++) {
+                let numeros_valido = false;
+                do {
+                    numeros[i] = parseInt(prompt('Informe o número ' + (i+ 1)));
+                    numeros_valido = (!isNaN(numeros[i]));	
+                } while (!numeros_valido);
+
+                numeros2[i] = numeros[i];
+                soma += numeros[i] ** 2;
+                numeros[i] = numeros[i] ** 2;
+                
+            }
+            alert('Números digitados: ' + numeros2 + '\nNúmeros ao quadrado: ' + numeros + '\nSoma: ' + soma);
+		</script>	
+	</body>
+</html>

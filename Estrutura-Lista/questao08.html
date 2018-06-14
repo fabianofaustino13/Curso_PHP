@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Lista - Questão 08</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Faça um Programa que peça a idade e a altura de 5 pessoas, armazene cada informação no seu respectivo vetor. Imprima a idade e a altura na ordem inversa a ordem lida.*/
+			let idade = new Array(2);
+            let altura = new Array(idade.length);
+            
+            for (let i = 0; i < idade.length; i++) {
+                let idade_valida = false;
+                do {
+                    idade[i] = parseInt(prompt('Informe a idade ' + (i+ 1)));
+                    idade_valida = (!isNaN(idade[i]));	
+                } while (!idade_valida);
+
+                let altura_valida = false;
+                do {
+                    altura[i] = parseFloat(prompt('Informe a altura da idade ' + (i+ 1)));
+                    altura_valida = (!isNaN(altura[i]));	
+                } while (!altura_valida);
+            }
+            alert('Em ordem digitada \nIdade: ' + idade + '\nAltura: ' + altura + '\n\nEm ordem inversa \nIdade: ' + idade.reverse() + '\nAltura: ' + altura.reverse());
+		</script>	
+	</body>
+</html>
