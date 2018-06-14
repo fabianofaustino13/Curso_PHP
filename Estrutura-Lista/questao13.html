@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Lista - Questão 13</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Faça um programa que receba a temperatura média de cada mês do ano e armazene-as em uma lista. Após isto, calcule a média anual das temperaturas e mostre todas as temperaturas acima da média anual, e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro, . . . ).*/
+			let media_mes = new Array(6);
+            let soma = 0;
+            for (let i = 0; i < media_mes.length; i++) {
+                let media_mes_valida = false;
+                do {
+                    media_mes[i] = parseFloat(prompt('Informe a temperatura média do mês ' + (i+ 1)));
+                    media_mes_valida = (!isNaN(media_mes[i]));	
+                } while (!media_mes_valida); 
+                soma += media_mes[i];
+               // debugger;
+            }
+            let maior = [];
+            for (let i = 0; i < media_mes.length; i++ ) {
+                if (media_mes[i] > soma/media_mes.length) {
+                    maior[i] = media_mes[i] + 'º\n';
+                    if (i == 0) {
+                        maior[i] = '1 - Janeiro ' + maior[i];
+                    }    
+                    if (i == 1) {
+                        maior[i] = '2 - Fevereiro ' + maior[i];
+                    }
+                    if (i == 2) {
+                        maior[i] = '3 - Março ' + maior[i];
+                    }   
+                    if (i == 3) {
+                        maior[i] = '4 - Abril ' + maior[i];
+                    }   
+                    if (i == 4) {
+                        maior[i] = '5 - Maio ' + maior[i];
+                    }
+                    if (i == 5) {
+                        maior[i] = '6 - Junho ' + maior[i];
+                    }
+                   // debugger;
+                }
+            }
+            alert(media_mes + '\nMédia da temperatura '+ (soma/6) +'º\nMaior mês\n' + maior.join(' '));
+		</script>	
+	</body>
+</html>
