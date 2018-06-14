@@ -7,7 +7,7 @@
 	<body>
         <script type="text/javascript">
         /*Faça um programa que receba a temperatura média de cada mês do ano e armazene-as em uma lista. Após isto, calcule a média anual das temperaturas e mostre todas as temperaturas acima da média anual, e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro, . . . ).*/
-			let media_mes = new Array(6);
+			let media_mes = new Array(12);
             let soma = 0;
             for (let i = 0; i < media_mes.length; i++) {
                 let media_mes_valida = false;
@@ -40,10 +40,29 @@
                     if (i == 5) {
                         maior[i] = '6 - Junho ' + maior[i];
                     }
+                    if (i == 6) {
+                        maior[i] = '7 - Julho ' + maior[i];
+                    }    
+                    if (i == 7) {
+                        maior[i] = '8 - Agosto ' + maior[i];
+                    }
+                    if (i == 8) {
+                        maior[i] = '9 - Setembro ' + maior[i];
+                    }   
+                    if (i == 9) {
+                        maior[i] = '10 - Outubro ' + maior[i];
+                    }   
+                    if (i == 10) {
+                        maior[i] = '11 - Novembro ' + maior[i];
+                    }
+                    if (i == 11) {
+                        maior[i] = '12 - Dezembro ' + maior[i];
+                    }
+
                    // debugger;
                 }
             }
-            alert(media_mes + '\nMédia da temperatura '+ (soma/6) +'º\nMaior mês\n' + maior.join(' '));
+            alert(media_mes + '\nMédia da temperatura '+ (soma/media_mes.length) +'º\nMaior mês\n' + maior.join(' '));
 		</script>	
 	</body>
 </html>
