@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura de Repetição - Questão 16</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*A série de Fibonacci é formada pela seqüência 0,1,1,2,3,5,8,13,21,34,55,... Faça um programa que gere a série até que o valor seja maior que 500.*/
+			let anterior = 0, atual = 0, i = 1;
+            let fibo = '';
+            do {
+				if (i ==  1) {
+                    atual = 1;
+                    anterior = 0;
+                }
+                else {
+                    atual += anterior;
+                    anterior = atual - anterior;
+                }
+                fibo += atual + ', ';
+                i++;
+			} while (i <= 50);
+			alert(fibo);
+		</script>	
+	</body>
+</html>
