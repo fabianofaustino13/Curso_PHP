@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura de Repetição - Questão 18</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um programa que, dado um conjunto de N números, determine o menor valor, o maior valor e a soma dos valores. */
+			let numero = 0, maior = 0, soma = 0;
+            let menor = 999999;
+            let todos_numeros = '';
+            do {
+                numero = parseInt(prompt('Informe o número inteiro'));
+                if (numero <= menor) {
+                    menor = numero;
+                }    
+                if (numero >= maior) {
+                    maior = numero;
+                }
+                todos_numeros += numero + ', ';
+                soma += numero;
+                var opcao = prompt('Deseja digitar outro número? [S/N]');
+            } while (opcao == 's');
+            
+			alert('Números digitados \n' + todos_numeros + '\nMenor: ' + menor + '\nMaior: ' + maior + '\nSoma de todos os números: ' + soma + '\nMenor + Maior: ' + (menor+maior));
+		</script>	
+	</body>
+</html>

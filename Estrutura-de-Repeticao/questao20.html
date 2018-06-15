@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura de Repetição - Questão 20</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Altere o programa de cálculo do fatorial, permitindo ao usuário calcular o fatorial várias vezes e limitando o fatorial a números inteiros positivos e menores que 16.*/
+            do {
+                let numero = 0;
+                let fatorial = 1;
+                do {
+				    numero = parseInt(prompt('Informe o número inteiro'));
+			    } while (numero < 1 || numero > 16);
+
+                for (let i = 1; i <= numero ; i++) {
+                    fatorial *= i;
+                    //debugger;
+                } 
+                alert(numero + '! = ' + fatorial);
+                var opcao = prompt('Deseja digitar outro número? [S/N]');
+            } while (opcao == 's');
+
+		</script>	
+	</body>
+</html>
