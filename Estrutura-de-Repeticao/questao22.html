@@ -2,24 +2,25 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Estrutura de Repetição - Questão 21</title>
+		<title>Estrutura de Repetição - Questão 22</title>
 	</head>
 	<body>
 		<script type="text/javascript">
-			/*Faça um programa que peça um número inteiro e determine se ele é ou não um número primo. Um número primo é aquele que é divisível somente por ele mesmo e por 1.*/
+			/*Altere o programa de cálculo dos números primos, informando, caso o número não seja primo, por quais número ele é divisível.*/
             let numero = 0, primo = 0;
+            let lista_primo = '';
             numero = parseInt(prompt('Informe o número inteiro'));
-            
             for (let i = 2; i < numero; i++) {
                 if (numero % i == 0) {
                     primo = 1;
+                    lista_primo += i + ', ';
                 }
             }
             if (primo == 0) {
                 alert(numero + ' é primo!');
             }
             else {
-                alert(numero + ' não primo!');
+                alert(numero + ' não primo, mas é divisível por: ' + lista_primo);
             }              
 		</script>	
 	</body>
