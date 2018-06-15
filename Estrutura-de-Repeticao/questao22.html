@@ -8,19 +8,19 @@
 		<script type="text/javascript">
 			/*Altere o programa de cálculo dos números primos, informando, caso o número não seja primo, por quais número ele é divisível.*/
             let numero = 0, primo = 0;
-            let lista_primo = '';
+            let lista_nao_primo = '';
             numero = parseInt(prompt('Informe o número inteiro'));
             for (let i = 2; i < numero; i++) {
                 if (numero % i == 0) {
                     primo = 1;
-                    lista_primo += i + ', ';
+                    lista_nao_primo += i + ', ';
                 }
             }
             if (primo == 0) {
                 alert(numero + ' é primo!');
             }
             else {
-                alert(numero + ' não primo, mas é divisível por: ' + lista_primo);
+                alert(numero + ' não primo, mas é divisível por: ' + lista_nao_primo);
             }              
 		</script>	
 	</body>
