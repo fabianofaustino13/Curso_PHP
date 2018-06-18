@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura de Repetição - Questão 24</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um programa que calcule o mostre a média aritmética de N notas.*/
+
+            let numero = 0, i = 0, soma = 0;
+            let digitados = '';
+            let resposta = 'S';
+            do {
+                numero = parseInt(prompt('Informe o número inteiro'));
+                digitados += numero + ', '; //somente para mostrar os números digitados
+                soma += numero;
+                i++;
+                resposta = prompt('Deseja continuar? [S/N]').toUpperCase();
+            } while (resposta == 'S')
+        
+            alert('Números digitados: ' + digitados + '\nTotal de ' + i + ' números digitados \nMédia ' + soma/i);
+		</script>	
+	</body>
+</html>

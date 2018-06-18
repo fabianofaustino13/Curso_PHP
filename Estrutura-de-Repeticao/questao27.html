@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura de Repetição - Questão 27</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um programa que calcule o número médio de alunos por turma. Para isto, peça a quantidade de turmas e a quantidade de alunos para cada turma. As turmas não podem ter mais de 40 alunos.*/
+
+            let numero_turmas = 0, numero_alunos = 0, media = 0;
+            let turma_a = '';
+            numero_turmas = parseInt(prompt('Informe o número de turmas'));
+            for (let i = 0; i < numero_turmas; i++) {
+                do {
+                    var media_alunos = 0;
+                    numero_alunos = parseInt(prompt('Informe o número de alunos da turma ' + (i+1)));
+                    if (numero_alunos <= 40) {
+                        media_alunos += numero_alunos;
+                        media += numero_alunos;
+                    }
+                }   while (numero_alunos > 40);
+                turma_a +='Turma ' + (i+1) + ' possui ' + media_alunos + ' alunos\n';
+            }
+
+            alert(turma_a + '\nMédia geral: ' + media/numero_turmas);
+            
+		</script>	
+	</body>
+</html>

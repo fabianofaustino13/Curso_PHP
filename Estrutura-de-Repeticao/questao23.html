@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura de Repetição - Questão 23</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Faça um programa que mostre todos os primos entre 1 e N sendo N um número inteiro fornecido pelo usuário. O programa deverá mostrar também o número de divisões que ele executou para encontrar os números primos. Serão avaliados o funcionamento, o estilo e o número de testes (divisões) executados.*/
+            let numero = 0, primo = 0;
+            let lista_nao_primo = '';
+            let lista_nao_primo2 = '';
+
+            let lista_primo = '';
+            let lista_primo2 = '';
+            var j = 0;
+            var i = 0;
+            
+            numero = parseInt(prompt('Informe o número inteiro'));
+            for (let i = 0; i < numero; i++) {
+                if (((i % j) != 0) || (i == 2) ) {
+                    for (j = 1; j <= i; j++) {            
+                        if ((i % j) == 0) {
+                            if (j == i) {
+                                //document.write(i + ' é primo<br>');
+                                lista_primo += i + ', ';
+                            }
+                            else {
+                                if ( j != 1) {
+                                    lista_nao_primo2 += j + ', ';
+                                    break; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            alert('Lista de números primos ' + lista_primo + '\nNão primos: ' + lista_nao_primo + '\nNão primo 2: ' + lista_nao_primo2);
+           
+		</script>	
+	</body>
+</html>

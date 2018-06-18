@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura de Repetição - Questão 26</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Numa eleição existem três candidatos. Faça um programa que peça o número total de eleitores. Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato. */
+
+            let voto = 0, tabuada = 0, limonada = 0, feijoada = 0;
+            let numero_eleitores = 0;
+            numero_eleitores = parseInt(prompt('Informe o total de eleitores'));
+            for (let i = 0; i < numero_eleitores; i++) {    
+                voto = parseInt(prompt('Informe o número do seu cantidato \n22 - Tabuada \n33 - Limonada \n 44 - Feijoada'));
+                switch (voto) {
+                    case 22:
+                        tabuada ++;
+                        break;
+                    case 33:
+                        limonada ++;
+                        break;
+                    case 44: 
+                        feijoada ++;
+                        break;
+                    default:
+                        alert('Voto inválido');
+                }
+            }
+            alert('O candidato 22 - Tabuada, obteve: ' + ((tabuada/numero_eleitores) * 100).toFixed(2) + '% dos votos \nO candidato 33 - Limonada, obteve: ' + ((limonada/numero_eleitores) * 100).toFixed(2) + '% dos votos \nO candidato 44 - Feijoada, obteve: ' + ((feijoada/numero_eleitores) * 100).toFixed(2) + '% dos votos');
+            
+		</script>	
+	</body>
+</html>
