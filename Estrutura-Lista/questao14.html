@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Lista - Questão 14</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Utilizando listas faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+        "Telefonou para a vítima?"
+        "Esteve no local do crime?"
+        "Mora perto da vítima?"
+        "Devia para a vítima?"
+        "Já trabalhou com a vítima?" O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".*/
+			let perguntas = new Array("Telefonou para a vítima?", "Esteve no local do crime?", "Mora perto da vítima?", "Devia para a vítima?", "Já trabalhou com a vítima?");
+            let respostas = new Array(perguntas.length);
+            let cont_sim = 0;
+            for (let i = 0; i < perguntas.length; i++) {
+                respostas[i] = (prompt(perguntas[i])).toUpperCase();
+               if (respostas[i] == 'S') {
+                   cont_sim ++;
+                   debugger;
+               }
+            }
+            if (cont_sim < 2) {
+                alert('Inocente');
+                debugger;
+            }
+            else if (cont_sim < 3) {
+                alert('Suspeita');
+                debugger;
+            }
+            else if (cont_sim >= 3 && cont_sim <= 4) {
+                alert('Cúmplice');
+                debugger;
+            }
+            else {
+                alert('Assassino');
+                debugger;
+            }
+		</script>	
+	</body>
+</html>
