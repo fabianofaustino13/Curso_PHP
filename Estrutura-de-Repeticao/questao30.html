@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura de Repetição - Questão 30</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*O Sr. Manoel Joaquim acaba de adquirir uma panificadora e pretende implantar a metodologia da tabelinha, que já é um sucesso na sua loja de 1,99. Você foi contratado para desenvolver o programa que monta a tabela de preços de pães, de 1 até 50 pães, a partir do preço do pão informado pelo usuário, conforme o exemplo abaixo:
+            Preço do pão: R$ 0.18
+            Panificadora Pão de Ontem - Tabela de preços
+            1 - R$ 0.18
+            2 - R$ 0.36
+            ...
+            50 - R$ 9.00*/
+            
+            let numero_itens = 0, valor = 0;
+            let resposta = 'S';
+            do {
+                numero_itens = parseInt(prompt('Informe a quantidade de pães'));
+                if (numero_itens <= 50) {
+                    alert('Panificadora Pão de Ontem - Tabela de preços\nValor a pagar R$' + (numero_itens * 0.18).toFixed(2));
+                    resposta = prompt('Deseja continuar? [S/N]').toUpperCase();
+                }
+            } while (resposta == 'S')
+		</script>	
+	</body>
+</html>

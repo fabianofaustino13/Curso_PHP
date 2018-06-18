@@ -18,7 +18,7 @@
             do {
                 numero_itens = parseInt(prompt('Informe o número de itens'));
                 if (numero_itens <= 50) {
-                    alert('Valor a pagar R$' + (numero_itens * 1.99));
+                    alert('Lojas Quase Dois - Tabela de preços \nValor a pagar R$' + (numero_itens * 1.99).toFixed(2));
                     resposta = prompt('Deseja continuar? [S/N]').toUpperCase();
                 }
             } while (resposta == 'S')
