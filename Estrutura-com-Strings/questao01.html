@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura com Strings - Questão 01</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Tamanho de strings. Faça um programa que leia 2 strings e informe o conteúdo delas seguido do seu comprimento. Informe também se as duas strings possuem o mesmo comprimento e são iguais ou diferentes no conteúdo.
+            Compara duas strings
+            String 1: Brasil Hexa 2006
+            String 2: Brasil! Hexa 2006!
+            Tamanho de "Brasil Hexa 2006": 16 caracteres
+            Tamanho de "Brasil! Hexa 2006!": 18 caracteres
+            As duas strings são de tamanhos diferentes.
+            As duas strings possuem conteúdo diferente.*/
+			//let str1 = '';
+            let str1 = prompt('Informe a string 01');
+			let str2 = prompt('Informe a string 02');
+			let tamanho1 = str1.length;
+            let tamanho2 = str2.length;
+            if (str1 == str2) {
+                alert('São iguais\n' + str1 + ' tamanho ' + tamanho1 + '\n' + str2 + ' tamanho ' + tamanho2);    
+            }
+            else {
+                alert('Não iguais\n' + str1 + ' tamanho ' + tamanho1 + '\n' + str2 + ' tamanho ' + tamanho2);
+            }
+			
+		</script>
+	</body>
+</html>

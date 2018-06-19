@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura com Strings - Questão 06</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Data por extenso. Faça um programa que solicite a data de nascimento (dd/mm/aaaa) do usuário e imprima a data com o nome do mês por extenso.
+            Data de Nascimento: 29/10/1973
+            Você nasceu em  29 de Outubro de 1973.*/
+            let str1 = prompt('Informe a data de nascimento (dd/mm/aaa)');    
+            let mes = '';
+            switch (str1.substr(3,2)) {
+                case '01':
+                    mes = 'Janeiro';
+                    break;
+                case '02':
+                    mes = 'Fevereiro';
+                    break;
+                case '03':
+                    mes = 'Março';
+                    break;
+                case '04':
+                    mes = 'Abril';
+                    break;
+                case '05':
+                    mes = 'maio';
+                    break;
+                case '06':
+                    mes = 'Junho';
+                    break;
+                case '07':
+                    mes = 'Julho';
+                    break;
+                case '08':
+                    mes = 'Agosto';
+                    break;
+                case '09':
+                    mes = 'Setembro';
+                    break;
+                case '10':
+                    mes = 'Outubro';
+                    break;
+                case '11':
+                    mes = 'Novembro';
+                    break;
+                case '12':
+                    mes = 'Dezembro';
+                    break;
+                default: 
+                    alert('Mês inválido');
+                    break;
+            }
+			alert('Data de nascimento: ' + str1 + '\nVocê nasceu em ' + str1.substr(0,2) + ' de ' + mes + ' de ' + str1.substr(-4));
+		</script>
+	</body>
+</html>

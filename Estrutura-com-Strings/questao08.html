@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura com Strings - Questão 08</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Palíndromo. Um palíndromo é uma seqüência de caracteres cuja leitura é idêntica se feita da direita para esquerda ou vice−versa. Por exemplo: OSSO e OVO são palíndromos. Em textos mais complexos os espaços e pontuação são ignorados. A frase SUBI NO ONIBUS é o exemplo de uma frase palíndroma onde os espaços foram ignorados. Faça um programa que leia uma seqüência de caracteres, mostre−a e diga se é um palíndromo ou não.*/
+            let str1 = prompt('Informe uma string').toUpperCase();
+            let sem_espaco = str1.split(" ").join("");
+            let invertido = sem_espaco.split("").reverse().join("");
+            if (sem_espaco == invertido) {
+                alert('A string ' + str1 + ' é um palíndromo' + '\nInvertido: ' + invertido);
+            }
+            else {
+                alert('A string ' + str1 + ' NÃO é um palíndromo' + '\nInvertido: ' + invertido);
+            }			
+		</script>
+	</body>
+</html>

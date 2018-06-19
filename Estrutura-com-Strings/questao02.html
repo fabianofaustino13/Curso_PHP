@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura com Strings - Questão 02</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Nome ao contrário em maiúsculas. Faça um programa que permita ao usuário digitar o seu nome e em seguida mostre o nome do usuário de trás para frente utilizando somente letras maiúsculas. Dica: lembre−se que ao informar o nome o usuário pode digitar letras maiúsculas ou minúsculas.*/
+            let str1 = prompt('Informe o seu nome');
+            let str2 = '';
+			for (let i = str1.length; i >= 0; i--) {
+                str2 += str1.charAt(i).toUpperCase() ;
+            }
+			alert('Seu nome invertido é: ' + str2);
+		</script>
+	</body>
+</html>

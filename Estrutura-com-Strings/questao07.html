@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura com Strings - Questão 07</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Conta espaços e vogais. Dado uma string com uma frase informada pelo usuário (incluindo espaços em branco), conte:
+            quantos espaços em branco existem na frase.
+            quantas vezes aparecem as vogais a, e, i, o, u.*/
+            let str1 = prompt('Informe uma string').toUpperCase();
+            let espaco = 0, vogal_a = 0, vogal_e = 0, vogal_i = 0, vogal_o = 0, vogal_u = 0, consoante = 0;
+			for (let i = 0; i < str1.length; i++) {
+                if (str1[i] == 'A') {
+                    vogal_a ++;
+                }
+                else if (str1[i] == 'E') {
+                    vogal_e ++;
+                }
+                else if (str1[i] == 'I') {
+                    vogal_i ++;
+                }
+                else if (str1[i] == 'O') {
+                    vogal_o ++;
+                }
+                else if (str1[i] == 'U') {
+                    vogal_u ++;
+                }
+                else if (str1[i] == ' ') {
+                    espaco ++;
+                }
+                else {
+                    consoante ++;
+                }
+            }
+			alert('A string digitada: ' + str1 + ' possui... \nVogal A: ' + vogal_a + '\nVogal E: ' + vogal_e + '\nVogal I: ' + vogal_i + '\nVogal O: ' + vogal_o + '\nVogal U: ' + vogal_u + '\nEspaços: ' + espaco + '\nConsoantes: ' + consoante);
+		</script>
+	</body>
+</html>

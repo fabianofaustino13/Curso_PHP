@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura com Strings - Questão 05</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Nome na vertical em escada invertida. Altere o programa anterior de modo que a escada seja invertida.
+            FULANO
+            FULAN
+            FULA
+            FUL
+            FU
+            F*/
+            let str1 = prompt('Informe o seu nome');
+            let str2 = '', str3 = '';
+            let indice = 0;
+			for (let i = 0; i < str1.length; i++) {
+                for (let j = 0; j < (str1.length - indice); j++) {
+                    str2 += str1.charAt(j).toUpperCase();
+                    str3 += str2.charAt(j).toUpperCase() + '';
+                    //debugger;
+                }
+                indice ++;
+                str3 += '\n';
+            }
+			alert(str3);
+		</script>
+	</body>
+</html>

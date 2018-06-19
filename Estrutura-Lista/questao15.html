@@ -25,7 +25,21 @@
                     i++;
                 }
             } while (nota >= 0);
-            alert('Quantidade de valores lidos: ' + i + '\nValores em ordem informada: ' + valores + '\nValores em ordem inversa: ' + valores.reverse() + '\nSoma ' + soma);
+            alert('Programa sendo encerrado!');
+            let acima_media = '';
+            let abaixo_media = '';
+            let cont_acima = 0, cont_abaixo = 0;
+            for (let j = 0; j < i; j++) {
+                if (valores[j] > (soma/i)) {
+                    acima_media += valores[j] + ' ';
+                    cont_acima ++;
+                }
+                if (valores[j] < 7) {
+                    abaixo_media += valores[j] + ' ';
+                    cont_abaixo ++;
+                }
+            }
+            alert('Quantidade de valores lidos: ' + i + '\nValores em ordem informada: ' + valores + '\nValores em ordem inversa: ' + valores.reverse() + '\nSoma: ' + soma + '\nMédia: ' + soma/i + '\nQuantidade de valores acima da média calculada ' + cont_acima + ': (' + acima_media + ')' + '\nQuantidade de valores abaixo de 7: ' + cont_abaixo + ' (' + abaixo_media + ')');
 		</script>	
 	</body>
 </html>
