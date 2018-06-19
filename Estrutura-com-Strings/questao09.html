@@ -6,9 +6,53 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			/*Palíndromo. Um palíndromo é uma seqüência de caracteres cuja leitura é idêntica se feita da direita para esquerda ou vice−versa. Por exemplo: OSSO e OVO são palíndromos. Em textos mais complexos os espaços e pontuação são ignorados. A frase SUBI NO ONIBUS é o exemplo de uma frase palíndroma onde os espaços foram ignorados. Faça um programa que leia uma seqüência de caracteres, mostre−a e diga se é um palíndromo ou não.*/
-            let cpf = new Array(14);
-            
+			/*Verificação de CPF. Desenvolva um programa que solicite a digitação de um número de CPF no formato xxx.xxx.xxx-xx e indique se é um número válido ou inválido através da validação dos dígitos verificadores edos caracteres de formatação.*/
+			
+      //cpf = '696.284.592-87';
+			cpf = prompt('Informe o CPF (xxx.xxx.xxx-xx)');
+
+			let numero = 0;
+			let valido = 'CPF Válido';
+			if (cpf.length != 14) {
+				//alert('Número inválido');
+				valido = 'CPF Inválido';
+			}
+			let cpf_limpo = cpf.split(".").join("").split("-").join("");
+			let cpf_numeral = (parseInt(cpf_limpo));
+
+			//alert(cpf_limpo + '\n'+ teste);
+			for (let i = 0; i < cpf.length; i++) {
+				//debugger;
+				if ((i == 3) || (i == 7)) {
+					if (cpf.charAt(i) != '.') {
+						//alert('CPF Inválido' + i);
+						//debugger;
+						//exit();
+						valido = 'CPF Inválido';
+					}
+				}
+				else if (i == 11) {
+					if (cpf.charAt(i) != '-') {
+						//alert('CPF Inválido');
+						//debugger;
+						//exit();
+						valido = 'CPF Inválido';
+					}
+				}
+				else {
+					numero = parseInt(cpf.charAt(i));
+					if (isNaN(numero)) {
+						//alert(' Deve ser um número '+ (numero));
+						//exit();
+						//debugger;
+						valido = 'CPF Inválido';
+					}
+					// else {
+					// 	alert(i);
+					// }
+				}	 		
+			}
+			alert('O número de CPF ' + cpf + ' é ' + valido);
 		</script>
 	</body>
 </html>
