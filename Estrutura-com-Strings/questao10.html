@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura com Strings - Questão 10</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Número por extenso. Escreva um programa que solicite ao usuário a digitação de um número até 99 e imprima-o na tela por extenso.*/
+
+            let numero = 0;
+            numero = parseInt(prompt('Informe um número até 99'));
+            let numero_string = '';
+            let string_a = ['Zero','Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez', 'Onze','Doze', 'Treze', 'Quatorze', 'Quinze', 'Dezesseis', 'Dezessete', 'Dezoito', 'Dezenove'];
+            let extenso = '';
+            if ((numero < 0) || (numero > 99)) {
+                alert('Número deve ser entre 0-99');
+            }
+            else {
+                numero_string = numero + '';
+                if (numero < 20) {
+                    extenso = string_a[numero];
+                }
+                else if (numero >= 20 && numero < 30) {
+                    if (numero == 20 ) {
+                        extenso = 'Vinte';
+                    }
+                    else {
+                        extenso = 'Vinte e ' + string_a[numero-20];
+                    }
+                }         
+                else if (numero >= 30 && numero < 40) {
+                    if (numero == 30 ) {
+                        extenso = 'Trinta';
+                    }
+                    else {
+                        extenso = 'Trinta e ' + string_a[numero-30];
+                    }
+                }
+                else if (numero >= 40 && numero < 50) {
+                    if (numero == 40 ) {
+                        extenso = 'Quarenta';
+                    }
+                    else {
+                        extenso = 'Quarenta e ' + string_a[numero-40];
+                    }
+                }
+                else if (numero >= 50 && numero < 60) {
+                    if (numero == 50 ) {
+                        extenso = 'Cinquenta';
+                    }
+                    else {
+                        extenso = 'Cinquenta e ' + string_a[numero-50];
+                    }
+                }
+                else if (numero >= 60 && numero < 70) {
+                    if (numero == 60 ) {
+                        extenso = 'Sessenta';
+                    }
+                    else {
+                        extenso = 'Sessenta e ' + string_a[numero-60];
+                    }
+                }
+                else if (numero >= 70 && numero < 80) {
+                    if (numero == 70 ) {
+                        extenso = 'Setenta';
+                    }
+                    else {
+                        extenso = 'Setenta e ' + string_a[numero-70];
+                    }
+                }
+                else if (numero >= 80 && numero < 90) {
+                    if (numero == 80 ) {
+                        extenso = 'Oitenta';
+                    }
+                    else {
+                        extenso = 'Oitenta e ' + string_a[numero-80];
+                    }
+                }
+                else {
+                    if (numero == 90 ) {
+                        extenso = 'Noventa';
+                    }
+                    else {
+                        extenso = 'Noventa e ' + string_a[numero-90];
+                    }
+                }
+                alert(extenso);
+            }
+		</script>
+	</body>
+</html>

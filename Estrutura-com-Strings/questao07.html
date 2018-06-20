@@ -12,19 +12,19 @@
             let str1 = prompt('Informe uma string').toUpperCase();
             let espaco = 0, vogal_a = 0, vogal_e = 0, vogal_i = 0, vogal_o = 0, vogal_u = 0, consoante = 0;
 			for (let i = 0; i < str1.length; i++) {
-                if (str1[i] == 'A') {
+                if (str1[i] == 'A' || (str1.charCodeAt(i) >= 192 && str1.charCodeAt(i) <= 197)) {
                     vogal_a ++;
                 }
-                else if (str1[i] == 'E') {
+                else if (str1[i] == 'E' || (str1.charCodeAt(i) >= 200 && str1.charCodeAt(i) <= 203)) {
                     vogal_e ++;
                 }
-                else if (str1[i] == 'I') {
+                else if (str1[i] == 'I' || (str1.charCodeAt(i) >= 204 && str1.charCodeAt(i) <= 207)) {
                     vogal_i ++;
                 }
-                else if (str1[i] == 'O') {
+                else if (str1[i] == 'O' || (str1.charCodeAt(i) >= 210 && str1.charCodeAt(i) <= 214)) {
                     vogal_o ++;
                 }
-                else if (str1[i] == 'U') {
+                else if (str1[i] == 'U' || (str1.charCodeAt(i) >= 217 && str1.charCodeAt(i) <= 220)) {
                     vogal_u ++;
                 }
                 else if (str1[i] == ' ') {
