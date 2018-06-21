@@ -14,7 +14,7 @@
             Telefone corrigido com formatação: 3461-0133*/
 			
 			let telefone = prompt('Informe o telefone (xxxx-xxxx)');
-            regex = /[0-9]{3}\-[0-9]{4}$|^[0-9]{7}$|[0-9]{4}\-[0-9]{4}$|^[0-9]{8}$/; 
+            regex = /^[0-9]{3}\-[0-9]{4}$|^[0-9]{7}$|[0-9]{4}\-[0-9]{4}$|^[0-9]{8}$/; 
             // Validar cnpj basta add | e a máscara. ex. "([0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2} | [0-9]{2}\.[0-9]{3}\.[0-9]{3}\/[0-9]{4}\-[0-9]{2})"
             valida_telefone = telefone.search(regex); //== -1 ? "Telefone Inválido" : "Telefone Válido";
 			//alert(valida_telefone);

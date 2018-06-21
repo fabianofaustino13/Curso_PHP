@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Lista - Questão 17</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Em uma competição de salto em distância cada atleta tem direito a cinco saltos. O resultado do atleta será determinado pela média dos cinco valores restantes. Você deve fazer um programa que receba o nome e as cinco distâncias alcançadas pelo atleta em seus saltos e depois informe o nome, os saltos e a média dos saltos. O programa deve ser encerrado quando não for informado o nome do atleta. A saída do programa deve ser conforme o exemplo abaixo:
+        Atleta: Rodrigo Curvêllo
+        
+        Primeiro Salto: 6.5 m
+        Segundo Salto: 6.1 m
+        Terceiro Salto: 6.2 m
+        Quarto Salto: 5.4 m
+        Quinto Salto: 5.3 m
+
+        Resultado final:
+        Atleta: Rodrigo Curvêllo
+        Saltos: 6.5 - 6.1 - 6.2 - 5.4 - 5.3
+        Média dos saltos: 5.9 m*/
+            let atleta = [];
+            let indice = ['Primeiro Salto: ','Segundo Salto: ','Terceiro Salto: ','Quarto Salto: ','Quinto Salto: '];
+            let relatorio = [];
+            let resultado = [];
+            let i = 0;
+            do {
+                nome_atleta = prompt('Informe o nome do atleta ' + (i+1));
+                let salto = [5];
+                if (nome_atleta == '') {
+                    //alert('Programa encerrado');
+                    break;
+                }
+                else {
+                    //nome [i] = nome_atleta;
+                    let media = 0;
+                    for (let j = 0; j < 5; j++) {
+                        salto[j] = parseFloat(prompt('Informe o salto ' + (j + 1) + ' do atleta ' + nome_atleta));
+                        atleta [j] = '\n' + indice[j] + salto[j] + ' m';
+                        media += salto[j];
+                    }
+                    relatorio[i] = nome_atleta + '' + atleta + '\n';
+                    //resultado[i] = (media/5).toFixed(2);
+                    resultado[i] = 'Atleta: ' + nome_atleta + '\nSaltos: ' + salto.join(' - ') + '\nMédia dos saltos: ' + (media/5).toFixed(2) + ' m\n';
+                }
+                i++;
+            }  while (nome_atleta != '');
+            
+            alert(relatorio.join('\n'));
+            alert('Resultado final:\n' + resultado.join('\n'));
+		</script>	
+	</body>
+</html>

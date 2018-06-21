@@ -17,26 +17,40 @@
         $900 - $999
         $1000 em diante
         Desafio: Crie ma fórmula para chegar na posição da lista a partir do salário, sem fazer vários ifs aninhados.*/
-            
             let salario = [];
-            let faixa = [300,400,500,600,700,800,900,1000];
-            let contadores = [0,0,0,0,0,0,0,0];
+            let faixa = [299,399,499,599,699,799,899,999,1000];
+            let contadores = [0,0,0,0,0,0,0,0,0];
+            let relatorio = [];
             let i = 0;
             do {
                 var sal = parseFloat(prompt('Digite 0 para sair'+'\nInforme o salário do vendedor ' + (i+1)));
                 salario[i] = sal;
-                for (j = 0; j < salario.length; j++) {
-                    if (salario[i] < faixa[j]) {
-                        contadores[j]++;
-                        break;
-                    }
+                if (sal > 0) {
+                    for (j = 0; j < salario.length; j++) {
+                        if (salario[i] >= faixa[8]) {
+                            contadores[8]++;
+                            relatorio[8] = 'Faixa salarial acima de R$' + (faixa[7]) + ' > ' + contadores[8];
+                            break;
+                        }
+                        else if (salario[i] < faixa[j]) {
+                            contadores[j]++;
+                            relatorio[i] = 'Faixa salarial de R$' + (faixa[i] - 99) + ' - R$' + (faixa[i]) + ' > ' + contadores[j];
+                            break;
+                        }
+                    }   
+                }
+                else {
+                    break;
                 }
                 i++
-                //debugger;
             }  while (sal > 0);
-            //debugger;
-            //alert('Faixas\n' + faixa + '\nSalários\n' + salario + '\nContadores\n' + cont)
-            alert(contadores.join('\n'));
+            for (j = 0; j < faixa.length; j++) {
+                relatorio[j] = 'Faixa salarial de R$' + (faixa[j] - 99) + ' - R$' + (faixa[j]) + ' > ' + contadores[j];
+                if (j == 8) {
+                    relatorio[j] = 'Faixa salarial acima de R$' + (faixa[7]) + ' > ' + contadores[8];
+                }
+            }
+            alert(relatorio.join('\n'));
 		</script>	
 	</body>
 </html>
