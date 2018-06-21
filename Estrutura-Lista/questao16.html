@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Lista - Questão 16</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Utilize uma lista para resolver o problema a seguir. Uma empresa paga seus vendedores com base em comissões. O vendedor recebe $200 por semana mais 9 por cento de suas vendas brutas daquela semana. Por exemplo, um vendedor que teve vendas brutas de $3000 em uma semana recebe $200 mais 9 por cento de $3000, ou seja, um total de $470. Escreva um programa (usando um array de contadores) que determine quantos vendedores receberam salários nos seguintes intervalos de valores:
+        $200 - $299
+        $300 - $399
+        $400 - $499
+        $500 - $599
+        $600 - $699
+        $700 - $799
+        $800 - $899
+        $900 - $999
+        $1000 em diante
+        Desafio: Crie ma fórmula para chegar na posição da lista a partir do salário, sem fazer vários ifs aninhados.*/
+            
+            let salario = [];
+            let faixa = [300,400,500,600,700,800,900,1000];
+            let contadores = [0,0,0,0,0,0,0,0];
+            let i = 0;
+            do {
+                var sal = parseFloat(prompt('Digite 0 para sair'+'\nInforme o salário do vendedor ' + (i+1)));
+                salario[i] = sal;
+                for (j = 0; j < salario.length; j++) {
+                    if (salario[i] < faixa[j]) {
+                        contadores[j]++;
+                        break;
+                    }
+                }
+                i++
+                //debugger;
+            }  while (sal > 0);
+            //debugger;
+            //alert('Faixas\n' + faixa + '\nSalários\n' + salario + '\nContadores\n' + cont)
+            alert(contadores.join('\n'));
+		</script>	
+	</body>
+</html>

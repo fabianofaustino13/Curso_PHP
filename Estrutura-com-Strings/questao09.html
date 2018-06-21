@@ -14,25 +14,25 @@
 			if (cpf.length != 14) {
 				valido = 'CPF Inválido';
 			}
-			let cpf_limpo = cpf.split(".").join("").split("-").join("");
-			let cpf_numeral = (parseInt(cpf_limpo));
-			for (let i = 0; i < cpf.length; i++) {
-				if ((i == 3) || (i == 7)) {
-					if (cpf.charAt(i) != '.') {
-						valido = 'CPF Inválido';
+			else {
+				for (let i = 0; i < cpf.length; i++) {
+					if ((i == 3) || (i == 7)) {
+						if (cpf.charAt(i) != '.') {
+							valido = 'CPF Inválido';
+						}
 					}
+					else if (i == 11) {
+						if (cpf.charAt(i) != '-') {
+							valido = 'CPF Inválido';
+						}
+					}
+					else {
+						numero = parseInt(cpf.charAt(i));
+						if (isNaN(numero)) {
+							valido = 'CPF Inválido';
+						}
+					}	 		
 				}
-				else if (i == 11) {
-					if (cpf.charAt(i) != '-') {
-						valido = 'CPF Inválido';
-					}
-				}
-				else {
-					numero = parseInt(cpf.charAt(i));
-					if (isNaN(numero)) {
-						valido = 'CPF Inválido';
-					}
-				}	 		
 			}
 			alert('O número de CPF ' + cpf + ' é ' + valido);
 		</script>
