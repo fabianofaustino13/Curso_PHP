@@ -43,6 +43,8 @@
             let i = 0, total_votos = 0;
             let sair = true;
             let teste = '';
+            let array = [];
+            let apuracao2 = [];
             do {
                 voto = parseInt(prompt('Número do jogador (0=fim):'));
                 if (voto == 0 ) {
@@ -57,7 +59,8 @@
                         if (conta_votos[j] > 0) {
                             //apuracao[voto-1] = 'Número do jogador '+ (voto) +': '+ conta_votos[voto-1] + ' media ' + (conta_votos[voto-1]/total_votos);
                             media_votos[j] = ((conta_votos[j]/total_votos) * 100).toFixed(1) + '%';
-                            apuracao[t] = (j+1) +': ' + media_votos[j] + '\n';      
+                            apuracao[t] = media_votos[j] +': ' + (j+1) + ' > ' + conta_votos[j] + '\n';      
+                            //apuracao2[t] = (j+1) +': ' + media_votos[j] + ' > ' + conta_votos[j] + '\n';      
                             t++;
                         }
                     }
@@ -69,10 +72,17 @@
                 }
                 i++;
             }  while (sair != false);
-          
-            //alert(media_votos.join('\n')+'\nTotal de ' + total_votos + ' votos');
             
+            apuracao = apuracao.sort();
+            apuracao = apuracao.reverse();
+            alert(apuracao2);
+            apuracao2 = apuracao.join('').search(': ');
+            //let nome = apuracao2.join('').search(': ');
+            //let player = ' ' + apuracao;
+            //let play = player.slice(6,10);
             alert(apuracao.join(''));
+            alert(apuracao2);
+            //alert(nome);
             
 		</script>	
 	</body>

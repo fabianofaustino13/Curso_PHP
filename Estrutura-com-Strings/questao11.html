@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura com Strings - Questão 11</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*Jogo de Forca. Desenvolva um jogo da forca. O programa terá uma lista de palavras lidas de um arquivo texto e escolherá uma aleatoriamente. O jogador poderá errar 6 vezes antes de ser enforcado.
+            Digite uma letra: A
+            -> Você errou pela 1ª vez. Tente de novo!
+
+            Digite uma letra: O
+            A palavra é: _ _ _ _ O
+
+            Digite uma letra: E
+            A palavra é: _ E _ _ O
+
+            Digite uma letra: S
+            -> Você errou pela 2ª vez. Tente de novo!*/
+			
+			let palavra = ['abacaxi', 'uva', 'maca', 'salmao', 'carrossel'];
+            let index = Math.floor(Math.random() * palavra.length);
+            
+            let resultado = [];
+            for (let i = 0; i < palavra[index].length; i++) {
+                resultado[i] = '_';
+            }
+            //alert(resultado);
+            //alert(palavra[index]);
+            
+            let tentativa = 0;
+            let erros = 0;
+            while (resultado.join('').search('_') != -1 && erros < 6 && tentativa < palavra[index].length * 2) {
+                alert(resultado.join(' '));
+                let achei = false;
+                let letra = prompt('Digite uma letra').toLowerCase().charAt(0);
+                for (let i = 0; i < palavra[index].length; i++) {
+                    if (letra == palavra[index].charAt(i)) {
+                        resultado[i] = letra;
+                        achei = true;
+                    }
+                }
+                if (!achei) {
+                    erros++;
+                    alert('Você errou pela ' + erros + 'ª vez. Tente de novo!');
+                }   
+                tentativa++;
+            }
+            alert(palavra[index]);
+
+		</script>
+	</body>
+</html>
