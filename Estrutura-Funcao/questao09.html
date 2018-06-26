@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Função - Questão 09</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Reverso do número. Faça uma função que retorne o reverso de um número inteiro informado. Por exemplo: 127 -> 721.*/
+        function reverso(numero) {
+            let x = numero + '';
+            let novoNumero = '';
+            for (let i = x.length; i >= 0; i--) {
+                novoNumero += x.charAt(i) + '';
+            }
+            return(novoNumero);
+        }
+
+        let numero = parseInt(prompt('Informe um número'));
+        alert('O número ' + numero + ' invertido e ' + reverso(numero));
+        
+		</script>	
+	</body>
+</html>

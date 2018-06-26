@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Função - Questão 08</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Faça uma função que informe a quantidade de dígitos de um determinado número inteiro informado.
+*/
+        function qtdDigito(numero) {
+            let x = numero + '';
+            return(x.length);
+        }
+
+        let numero = parseInt(prompt('Informe um número'));
+        alert('O número ' + numero + ' possui ' + qtdDigito(numero) + ' dígitos');
+        
+		</script>	
+	</body>
+</html>

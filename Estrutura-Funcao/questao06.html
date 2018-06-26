@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Função - Questão 06</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Faça um programa que converta da notação de 24 horas para a notação de 12 horas. Por exemplo, o programa deve converter 14:25 em 2:25 P.M. A entrada é dada em dois inteiros. Deve haver pelo menos duas funções: uma para fazer a conversão e uma para a saída. Registre a informação A.M./P.M. como um valor ‘A’ para A.M. e ‘P’ para P.M. Assim, a função para efetuar as conversões terá um parâmetro formal para registrar se é A.M. ou P.M. Inclua um loop que permita que o usuário repita esse cálculo para novos valores de entrada todas as vezes que desejar.*/
+        function conversao(hora, minutos) {
+            let turno = true; // hora maior que 12? True
+            let hora_digitada = hora + ':' + minutos;
+            if (hora > 12 ) {
+                hora = (hora - 12) + ':' + minutos;
+                turno = true;
+            }
+            else {
+                hora = hora + ':' + minutos;
+                turno = false;
+            }
+//            alert('Hora digitada ' + hora_digitada + '\nHora convertida ' + saida(hora, turno)+'.M');
+            let resultado = saida(hora, turno)
+            return(resultado);
+        }
+        function saida(hora, turno) {
+            if (turno) {
+                hora = hora + ' P';
+            }
+            else {
+                hora = hora + ' A';
+            }
+            return(hora);
+        }
+        do {
+            let hora = parseInt(prompt('Informe a hora'));
+            let minutos = parseInt(prompt('Informe os minutos'));
+            //conversao(hora, minutos);
+            alert('Hora digitada ' + hora + ':' + minutos + '\nHora convertida ' + conversao(hora, minutos) +'.M');
+            var continuar = prompt('Deseja continuar? [S/N]').toUpperCase();
+        } while (continuar != 'N');
+        
+		</script>	
+	</body>
+</html>

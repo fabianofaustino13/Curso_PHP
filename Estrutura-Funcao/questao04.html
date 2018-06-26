@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Função - Questão 04</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Faça um programa, com uma função que necessite de três argumentos, e que forneça a soma desses três argumentos.
+*/
+        function argumento(arg) {
+            let x = arg.length;
+            let result = '';
+            if (x > 0) {
+                result = 'P';
+            }
+            else {
+                result = 'N';
+            }
+            return(result);
+        }
+
+        let arg = prompt('Informe um argumento');
+        
+        alert(argumento(arg));
+        
+		</script>	
+	</body>
+</html>
