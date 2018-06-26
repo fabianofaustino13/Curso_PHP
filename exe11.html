@@ -37,6 +37,30 @@
         11              1               12,5%
         O melhor jogador foi o número 9, com 4 votos, correspondendo a 50% do total de votos.*/
             let jogadores = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+            let jogadores2 = [
+            {nome: 1, media: 0, votos: 0},
+            {nome: 2, media: 0, votos: 0},
+            {nome: 3, media: 0, votos: 0},
+            {nome: 4, media: 0, votos: 0},
+            {nome: 5, media: 0, votos: 0},
+            {nome: 6, media: 0, votos: 0},
+            {nome: 7, media: 0, votos: 0},
+            {nome: 8, media: 0, votos: 0},
+            {nome: 9, media: 0, votos: 0},
+            {nome: 10, media: 0, votos: 0},
+            {nome: 11, media: 0, votos: 0},
+            {nome: 12, media: 0, votos: 0},
+            {nome: 13, media: 0, votos: 0},
+            {nome: 14, media: 0, votos: 0},
+            {nome: 15, media: 0, votos: 0},
+            {nome: 16, media: 0, votos: 0},
+            {nome: 17, media: 0, votos: 0},
+            {nome: 18, media: 0, votos: 0},
+            {nome: 19, media: 0, votos: 0},
+            {nome: 20, media: 0, votos: 0},
+            {nome: 21, media: 0, votos: 0},
+            {nome: 22, media: 0, votos: 0},
+            {nome: 23, media: 0, votos: 0}];
                             
             let conta_votos = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
             let media_votos = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
@@ -44,6 +68,7 @@
             let voto = 0;
             let i = 0, total_votos = 0;
             let sair = true;
+            let teste = '';
             
             do {
                 voto = parseInt(prompt('Número do jogador (0=fim):'));
@@ -58,11 +83,16 @@
                     for (let j = 0; j < jogadores.length; j++) {
                         if (conta_votos[j] > 0) {
                             //apuracao[voto-1] = 'Número do jogador '+ (voto) +': '+ conta_votos[voto-1] + ' media ' + (conta_votos[voto-1]/total_votos);
-                            media_votos[j] = ((conta_votos[j]/total_votos) * 100).toFixed(0) + '%';
-                            apuracao[t] = media_votos[j] + ' - ' + (j+1) + ' - ' + conta_votos[j] + ' - ';
+                            media_votos[j] = ((conta_votos[j]/total_votos) * 100).toFixed(1) + '%';
+                            apuracao[t] = media_votos[j] +': ' + (j+1) + ' > ' + conta_votos[j] + '\n';
+                            jogadores2[j].nome = j+1;
+                            jogadores2[j].media = media_votos[j];
+                            jogadores2[j].votos = conta_votos[j];
+                            debugger;
                             t++;
                         }
                     }
+                    //apuracao[voto-1] = 'Número do jogador '+ (voto) +': '+ conta_votos[voto-1] + ' media ' + media_votos;
                 }
                 else {
                     alert('Informe um valor entre 1 e 23 ou 0 para sair!');
@@ -71,17 +101,16 @@
                 i++;
             }  while (sair != false);
             
-            apuracao = apuracao.sort();
-            apuracao = apuracao.reverse();
-
-            let resultado = [];
-            for (let i = 0; i < apuracao.length; i++) {
-                let porcentagem = apuracao[i].slice(0,3);
-                let candidato = apuracao[i].slice(6,8);
-                let votos = apuracao[i].slice(10,12); 
-                resultado[i] = candidato + '                ' + votos + '    ' + porcentagem + '\n';
-            }
-            alert('Jogador  Votos  %  \n' + resultado.join(''));
+            //apuracao = apuracao.sort(apuracao.media_votos);
+            //apuracao = apuracao.reverse(apuracao.media_votos);
+            let teste3 = jogadores2.sort(function(a, b) {
+                return a.media - b.media;
+            })
+            
+            alert('Foram computados ' + total_votos + ' votos.\n'+apuracao.join(''));
+            //alert('\nApuracao 2\n' + apuracao2);
+            alert(teste3);
+            
             
 		</script>	
 	</body>
