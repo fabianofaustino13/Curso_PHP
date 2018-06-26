@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Exercício 11 - Funções</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+            function mensagem(x) {
+                //alert(x.toUpperCase());
+                return x.toUpperCase();
+            }
+            let x = 'Alô Brasil';
+            alert(mensagem(x));
+            
+            function soma(numero1, numero2) {
+                let resultado = numero1 + numero2;
+                return resultado;
+            }
+
+            function fatorial(numero) {
+                let resultado = 1;
+                for (let i = numero; i > 0; i--) {
+                    resultado *= i;
+                }
+                return resultado;
+            }
+
+            let teste = fatorialRecursivo(5);
+            
+            function fatorialRecursivo(numero) {
+                return numero == 1 ? 1 : fatorialRecursivo(numero - 1) * numero;
+            }
+
+            alert(teste);
+		</script>	
+	</body>
+</html>

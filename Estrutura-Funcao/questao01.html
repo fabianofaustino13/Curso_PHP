@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Estrutura Função - Questão 01</title>
+	</head>
+	<body>
+        <script type="text/javascript">
+        /*Faça um programa para imprimir:
+        1
+        2   2
+        3   3   3
+        .....
+        n   n   n   n   n   n  ... n
+        para um n informado pelo usuário. Use uma função que receba um valor n inteiro e imprima até a n-ésima linha.*/
+        let numero = parseInt(prompt('Informe um número inteiro'));
+        
+        imprimirNumero(numero);
+        
+        function imprimirNumero(numero) {
+            let resultado = '';
+            for (let i = 0; i <= numero; i++) {
+                for (let j = 0; j < i; j++) {
+                    resultado += (i) + ' ';
+                }
+                resultado += '\n';
+            }
+            alert(resultado);
+        }
+		</script>	
+	</body>
+</html>
