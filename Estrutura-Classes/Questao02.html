@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Estrutura Classes - Questão 02</title>
+    </head>
+    <body>
+        <script>
+            /*Classe Quadrado: Crie uma classe que modele um quadrado:
+            Atributos: Tamanho do lado
+            Métodos: Mudar valor do Lado, Retornar valor do Lado e calcular Área;*/
+            class Quadrado {
+                constructor(tamanho) {
+                    this.setMudarLado(tamanho);
+                }
+
+                setMudarLado(tamanho) {
+                    this._tamanho = tamanho;                  
+                }
+
+                getMostrarLado(tamanho) {
+                    return this._tamanho;
+                }
+                
+                getCalcularArea(tamanho){
+                    return (this._tamanho*this._tamanho);
+                }
+            }
+            let quadrado = new Quadrado(5);
+            
+            console.log(quadrado);
+        </script>    
+    </body>
+    
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Estrutura Classes - Questão 03</title>
+    </head>
+    <body>
+        <script>
+            /*Classe Retangulo: Crie uma classe que modele um retangulo:
+
+            Atributos: LadoA, LadoB (ou Comprimento e Largura, ou Base e Altura, a escolher)
+            Métodos: Mudar valor dos lados, Retornar valor dos lados, calcular Área e calcular Perímetro;
+            Crie um programa que utilize esta classe. Ele deve pedir ao usuário que informe as medidades de um local. Depois, deve criar um objeto com as medidas e calcular a quantidade de pisos e de rodapés necessárias para o local.*/
+            class Retangulo {
+                constructor(base, altura) {
+                    this.setMudarBase(base);
+                    this.setMudarAltura(altura);
+                }
+
+                setMudarBase(base) {
+                    this._base = base;
+                }
+                setMudarAltura(altura) {
+                    this._altura = altura;
+                }
+
+                getMostrar(base, altura) {
+                    return (('Base ' + this._base + ' e Altura ' + this._altura));
+                }
+                
+                getCalcularArea(base, altura){
+                    return (this._base * this._altura);
+                }
+                
+                getCalcularPerimetro(base, altura){
+                    return ((this._base * 2 ) + (this._altura * 2));
+                }
+            }
+            let retangulo = new Retangulo(2,3);
+            
+            console.log(retangulo);
+        </script>    
+    </body>
+</html>

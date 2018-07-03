@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Estrutura Classes - Questão 01</title>
+    </head>
+    <body>
+        <script>
+            /*Classe Bola: Crie uma classe que modele uma bola:
+            Atributos: Cor, circunferência, material
+            Métodos: trocaCor e mostraCor*/
+            class Bola {
+                constructor(cor, circunferencia, material) {
+                    this.setTrocarCor(cor);
+                    this._circunferencia = circunferencia;
+                    this._material = material;
+                }
+
+                setTrocarCor(cor) {
+                    this._cor = cor;                  
+                }
+
+                getMostrarCor(cor) {
+                    return this._cor;
+                }
+            }
+            let b1 = new Bola('azul', 5, 'couro');
+            
+            console.log(b1);
+        </script>    
+    </body>
+    
+</html>
