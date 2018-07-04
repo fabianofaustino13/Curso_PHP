@@ -12,9 +12,23 @@
             Métodos: Mudar valor dos lados, Retornar valor dos lados, calcular Área e calcular Perímetro;
             Crie um programa que utilize esta classe. Ele deve pedir ao usuário que informe as medidades de um local. Depois, deve criar um objeto com as medidas e calcular a quantidade de pisos e de rodapés necessárias para o local.*/
             
-            let retangulo = new Retangulo(2,3);
+            // let retangulo = new Retangulo(2,3);  
+            // console.log(retangulo);
+            let comprimento = parseFloat(prompt('Informe o comprimento do local'));
+            let largura = parseFloat(prompt('Informe a largura do local'));
+
+            let comprimento_piso = parseFloat(prompt('Comprimento do piso'));
+            let largura_piso = parseFloat(prompt('Largura do piso'));
             
-            console.log(retangulo);
+            let margem = parseFloat(prompt('Informe a margem de perda (10%)'));
+
+            let terreno = new Retangulo(comprimento, largura, margem);
+            let piso = new Retangulo(comprimento_piso, largura_piso, margem);
+            
+            let perda = (terreno.obterArea()/piso.obterArea()) + (((terreno.obterArea()/piso.obterArea()) * margem)/100);
+
+            alert('Área do terreno: ' + terreno.obterBase() + ' x ' + terreno.obterAltura() + ' = ' + terreno.obterArea() + 'm²\n' + 'Área do piso: '+ piso.obterBase() + ' x ' + piso.obterAltura() + ' = ' + piso.obterArea().toFixed(2) + 'm²\n' + 'Quantidade de pisos: ' + (terreno.obterArea()/piso.obterArea()).toFixed(0) + '\nQuantidade de pisos com ' + margem +'%: ' + perda.toFixed(0));
+
         </script>    
     </body>
 </html>

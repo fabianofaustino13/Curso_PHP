@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Estrutura Classes - Questão 10</title>
+    </head>
+    <script src="Questao10/BombaCombustivel.js"></script>
+    <body>
+        <script>
+            /*Classe Bomba de Combustível: Faça um programa completo utilizando classes e métodos que:
+            Possua uma classe chamada bombaCombustível, com no mínimo esses atributos:
+            tipoCombustivel.
+            valorLitro
+            quantidadeCombustivel
+            Possua no mínimo esses métodos:
+            abastecerPorValor( ) – método onde é informado o valor a ser abastecido e mostra a quantidade de litros que foi colocada no veículo
+            abastecerPorLitro( ) – método onde é informado a quantidade em litros de combustível e mostra o valor a ser pago pelo cliente.
+            alterarValor( ) – altera o valor do litro do combustível.
+            alterarCombustivel( ) – altera o tipo do combustível.
+            alterarQuantidadeCombustivel( ) – altera a quantidade de combustível restante na bomba.
+            OBS: Sempre que acontecer um abastecimento é necessário atualizar a quantidade de combustível total na bomba.*/
+            let tipo_combustivel = 1;//parseInt(prompt('Informe o tipo de combustível\n1 - Gasolina \n2 - Alcool \n3 - Diesel'));
+            let valor_litro = 2.50;//parseFloat(prompt('Informe o valor do litro do ' + tipo_combustivel));
+            let qnt_combustivel = 200;//parseFloat(prompt('Informe a quantidade de ' + tipo_combustivel + ' na bomba'));
+            
+            let bomba = new BombaCombustivel(tipo_combustivel, valor_litro, qnt_combustivel);
+            
+            let continuar = 'S';
+            let atualizar = true;
+            do {
+                // if (atualizar) {
+                //     let tipo_combustivel = parseInt(prompt('Informe o tipo de combustível\n1 - Gasolina \n2 - Alcool \n3 - Diesel'));
+                //     let valor_litro = parseFloat(prompt('Informe o valor do litro do ' + tipo_combustivel));
+                //     let qnt_combustivel = parseFloat(prompt('Informe a quantidade de ' + tipo_combustivel + ' na bomba'));
+                //     atualizar = false;
+                // }
+                //let bomba = new BombaCombustivel(tipo_combustivel, valor_litro, qnt_combustivel);
+
+                let opcao = parseInt(prompt('1 - Abastecer por Valor\n2 - Abastecer por Litro \n3 - Alterar o valor do combustível\n4 - Alterar o tipo de combustível\n5 - Alterar a quantidade de combustível na bomba'));
+                switch (opcao) {
+                    case 1: 
+                        //let abastecer_valor = parseFloat(prompt('Deseja colocar quantos reais?'));
+                        let litros = bomba.abastecerPorValor(parseFloat(prompt('Deseja colocar quantos reais?')));
+                        if (litros != false) {
+                            alert(litros + ' Litros \nA bomba possui ' + bomba.obterQntBomba() + ' Litros disponíveis');
+                        }else{
+                            opcao = 5;
+                        }
+                        break;
+                    case 2: 
+                        bomba.abastecerPorLitro();
+                        break;
+                    case 3: 
+                        valor_litro = parseFloat(prompt('Informe o valor do litro do ' + tipo_combustivel));
+                        bomba.alterarValor(valor_litro);
+                        break;
+                    case 4: 
+                        tipo_combustivel = parseInt(prompt('Informe novo tipo de combustível\n1 - Gasolina \n2 - Alcool \n3 - Diesel'));
+                        bomba.alterarTipo(tipo_combustivel);
+                        break;
+                    case 5: 
+                        let qnt = qnt_combustivel;
+                        bomba.alterarQntBomba();
+                        alert('A bomba possuia ' + qnt + ' e agora possui ' + bomba.obterQntBomba());
+                    default: 
+                }
+                continuar = prompt('Novo abastecimento? [S/N)').toUpperCase();
+            } while (continuar == 'S');
+
+        </script>    
+    </body>
+</html>
