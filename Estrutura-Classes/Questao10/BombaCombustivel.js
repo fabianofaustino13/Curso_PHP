@@ -12,18 +12,16 @@ class BombaCombustivel {
     }
     alterarQntBomba(qnt) {
         //let alterar_qnt_bomba = parseFloat(prompt('Informe a quantidade de litros para atualizar na bomba'));
-        this._qnt += alterar_qnt_bomba;
+        this._qnt += qnt;
     }
     abastecerPorValor(valor) {
         let litros = (valor / this._valor);
-        alert('Litros ' + litros + ' qnt ' + this._qnt);
+//        alert('Litros ' + litros + ' qnt ' + this._qnt);
         if (this._qnt < litros) {
-            alert('Aqui 1 ');
-
+//            alert('Aqui 1 ');
             return false;
         }else{
-           alert('Aqui 2 ');
-
+//           alert('Aqui 2 ');
             this._qnt -= (valor / this._valor);
             return (litros);
         }

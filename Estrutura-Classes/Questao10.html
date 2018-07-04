@@ -36,33 +36,49 @@
                 //let bomba = new BombaCombustivel(tipo_combustivel, valor_litro, qnt_combustivel);
 
                 let opcao = parseInt(prompt('1 - Abastecer por Valor\n2 - Abastecer por Litro \n3 - Alterar o valor do combustível\n4 - Alterar o tipo de combustível\n5 - Alterar a quantidade de combustível na bomba'));
+                let sair = 1;
+                do {
                 switch (opcao) {
                     case 1: 
                         //let abastecer_valor = parseFloat(prompt('Deseja colocar quantos reais?'));
-                        let litros = bomba.abastecerPorValor(parseFloat(prompt('Deseja colocar quantos reais?')));
+                        let valor_pagar = parseFloat(prompt('Deseja colocar quantos reais?'));
+                        let litros = bomba.abastecerPorValor(valor_pagar);
+                        //let sair = 0;
                         if (litros != false) {
-                            alert(litros + ' Litros \nA bomba possui ' + bomba.obterQntBomba() + ' Litros disponíveis');
+                            alert('Valor do litro R$' + bomba.obterValorLitro() + '\nLitros --> ' + litros + 'L.\nTotal a pagar R$' + valor_pagar + '\nA bomba possui ' + bomba.obterQntBomba() + ' Litros disponíveis');
                         }else{
                             opcao = 5;
-                        }
+                            sair = 0;
+                            alert('A bomba possui ' + bomba.obterQntBomba() + 'L.\nSerá necessário reabastecer a bomba');
+                        }                        
                         break;
                     case 2: 
-                        bomba.abastecerPorLitro();
+                        let litro_abastecer = parseFloat(prompt('Deseja colocar quantos litros?'));
+                        if (bomba.obterQntBomba() > litro_abastecer) {
+                            alert('Valor do litro R$' + bomba.obterValorLitro() + '\nLitros --> ' + litro_abastecer + '\nTotal a pagar é R$' + bomba.abastecerPorLitro(litro_abastecer) + '\nA bomba possui ' + bomba.obterQntBomba() + ' Litros disponíveis');
+                        }else{
+                            opcao = 5;
+                            sair = 0;
+                            alert('A bomba possui ' + bomba.obterQntBomba() + 'L.\nSerá necessário reabastecer a bomba');
+                        }
                         break;
                     case 3: 
-                        valor_litro = parseFloat(prompt('Informe o valor do litro do ' + tipo_combustivel));
-                        bomba.alterarValor(valor_litro);
+                        valor_litro = parseFloat(prompt('Informe o reajuste do litro do combustível: ' + bomba.obterCombustivel()));
+                        bomba.alterarValorLitro(valor_litro);
                         break;
                     case 4: 
                         tipo_combustivel = parseInt(prompt('Informe novo tipo de combustível\n1 - Gasolina \n2 - Alcool \n3 - Diesel'));
                         bomba.alterarTipo(tipo_combustivel);
                         break;
                     case 5: 
-                        let qnt = qnt_combustivel;
-                        bomba.alterarQntBomba();
+                        let qnt = bomba.obterQntBomba();
+                        bomba.alterarQntBomba(parseFloat(prompt('Deseja colocar quantos litros na bomba?')));
                         alert('A bomba possuia ' + qnt + ' e agora possui ' + bomba.obterQntBomba());
+                        sair = 1;
+                        break;
                     default: 
                 }
+            } while (sair != 1);
                 continuar = prompt('Novo abastecimento? [S/N)').toUpperCase();
             } while (continuar == 'S');
 
