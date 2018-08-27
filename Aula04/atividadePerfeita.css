@@ -1,0 +1,33 @@
+table, th, td {
+	text-align: left;
+}
+table {
+	width: 50%;
+	margin: auto;
+}
+
+th {
+	text-align: center;
+	color: white;
+	background-color: #0080FF;
+}
+
+tr:nth-child(even) { /*Linha par*/
+	background-color: lightgray;
+	
+}
+
+tr:nth-child(odd) { /*Linha impar*/
+	background-color: lightblue;
+	width: 60%;
+}
+
+img {
+	width: 60px;
+	height: 20px;
+}
+
+p {
+	text-align: center;
+	font-weight: bold;
+}

@@ -1,0 +1,398 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"fonts",
+				"font-size\tproperty"
+			],
+			[
+				"margi",
+				"margin\tproperty"
+			],
+			[
+				"mar",
+				"margin\tproperty"
+			],
+			[
+				"tex",
+				"text-decoration-style\tproperty"
+			],
+			[
+				"marg",
+				"margin-top\tproperty"
+			],
+			[
+				"whi",
+				"width\tproperty"
+			],
+			[
+				"bakc",
+				"background-color\tproperty"
+			],
+			[
+				"top",
+				"margin-top\tproperty"
+			],
+			[
+				"alig",
+				"text-align\tproperty"
+			],
+			[
+				"wh",
+				"width\tproperty"
+			],
+			[
+				"text-deco",
+				"text-decoration-color\tproperty"
+			],
+			[
+				"colas",
+				"border-collapse\tproperty"
+			],
+			[
+				"tr",
+				"tr\tTag"
+			],
+			[
+				"font-",
+				"font-family\tproperty"
+			],
+			[
+				"backgrou",
+				"background-color\tproperty"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"backgr",
+				"background-color\tproperty"
+			],
+			[
+				"ali",
+				"align-items\tproperty"
+			],
+			[
+				"text-al",
+				"text-align\tproperty"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"margin",
+				"margin\tproperty"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"w",
+				"width\tproperty"
+			],
+			[
+				"silvio",
+				"silvio"
+			],
+			[
+				"al",
+				"text-align\tproperty"
+			],
+			[
+				"auto",
+				"autocomplete\tAttr"
+			],
+			[
+				"ma",
+				"max\tAttr"
+			],
+			[
+				"max",
+				"maxlength\tAttr"
+			],
+			[
+				"centro",
+				"centro-distribuicao"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			],
+			[
+				"backg",
+				"background\tproperty"
+			],
+			[
+				"para",
+				"paragrafo-bairro"
+			],
+			[
+				"s",
+				"style\tAttr"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "teste.php",
+			"settings":
+			{
+				"buffer_size": 110,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/I/Curso_PHP/sitePolitico/index.html",
+		"/I/Curso_PHP/sitePolitico/proposta.html",
+		"/I/Curso_PHP/sitePolitico/biografia.html",
+		"/I/Curso_PHP/sitePolitico/contato.html",
+		"/I/Curso_PHP/sitePolitico/css/style.css",
+		"/I/Curso_PHP/Aula05/css/style-exercicio.css",
+		"/I/Curso_PHP/Aula05/exercicio.html",
+		"/I/Curso_PHP/Aula05/css/style-divs.css",
+		"/I/Curso_PHP/Aula05/divs.html",
+		"/G/Curso_PHP/Aula05/exercicio.html",
+		"/G/Curso_PHP/Aula05/css/style-divs.css",
+		"/G/Curso_PHP/Aula05/divs.html",
+		"/G/Curso_PHP/Aula04/atividadePerfeita.css",
+		"/G/Curso_PHP/Aula04/atividadePerfeita.html",
+		"/G/Curso_PHP/Aula05/css/style-exercicio.css",
+		"/G/Curso_PHP/Aula04/pesquisaEleitoral.html",
+		"/G/Curso_PHP/Aula04/pesquisaEleitoral.css",
+		"/I/Curso_PHP/Aula02/tarefa/tarefa.html",
+		"/I/Curso_PHP/Aula03/pesquisaEleitoral.css",
+		"/I/Curso_PHP/Aula03/pesquisaEleitoral.html",
+		"/I/Curso_PHP/Aula02/tarefa/fotos.css",
+		"/I/Curso_PHP/Aula02/tarefa/fotos.html",
+		"/I/Curso_PHP/Aula02/tarefa/style.css",
+		"/G/Curso_PHP/Aula04/formulario.css",
+		"/G/Curso_PHP/Aula04/formulario.html",
+		"/G/Curso_PHP/Aula04/atividade1.css",
+		"/G/Curso_PHP/Aula04/atividade1.html",
+		"/G/Curso_PHP/Aula04/tabela.css",
+		"/G/Curso_PHP/Aula04/tabela.html",
+		"/G/Curso_PHP/Aula03/pesquisaEleitoral.css",
+		"/G/Curso_PHP/Aula03/pesquisaEleitoral.html",
+		"/I/Curso_PHP/Aula01/curriculo/curriculo.html",
+		"/I/Curso_PHP/Aula01/curriculo/css/sobre.css",
+		"/I/Curso_PHP/Aula01/curriculo/sobre.html",
+		"/I/Curso_PHP/Aula01/exemplo/style.css",
+		"/I/Curso_PHP/Aula03/formulario.html",
+		"/I/Curso_PHP/Aula03/tarefa/style.css",
+		"/I/Curso_PHP/Aula01/exemplo/bio.html",
+		"/I/Curso_PHP/Apostila/mirrorfashion/css/sobre.css",
+		"/I/Curso_PHP/Apostila/mirrorfashion/estilos.css",
+		"/G/Curso_PHP/Aula03/formulario.html",
+		"/G/Curso_PHP/Aula03/tarefa/tarefa.html",
+		"/G/Curso_PHP/Aula02/tarefa/style.css",
+		"/I/Curso_PHP/Apostila/mirrorfashion/index.html",
+		"/I/Curso_PHP/Apostila/mirrorfashion/sobre.html",
+		"/G/Curso_PHP/Aula02/exemplo/style.css",
+		"/G/Curso_PHP/Aula02/exemplo/bio.html",
+		"/G/Curso_PHP/Aula02/tarefa/contato.html",
+		"/G/Curso_PHP/Aula02/tarefa/tarefa.html",
+		"/G/Curso_PHP/Aula02/tarefa/fotos.html",
+		"/G/Curso_PHP/Aula01/exemplo/style.css",
+		"/I/Curso_PHP/Aula01/exemplo/intro.php"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Conteúdo",
+			"600px",
+			"vice-lider",
+			"for"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "teste.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								102,
+								102
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "teste.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

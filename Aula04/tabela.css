@@ -1,0 +1,25 @@
+table, th, td {
+	border: 1px dotted;
+	text-align: center;
+}
+
+table {
+	width: 70%;
+	margin: auto;
+}
+
+.coluna-nome {
+	width: 60%;
+}
+
+.alinhamento-coluna-nome {
+	text-align: left;
+}
+
+tr:nth-child(even) {
+	background-color: lightblue;
+}
+
+tr:nth-child(odd) {
+	background-color: lightgreen;
+}

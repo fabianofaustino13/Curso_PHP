@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pesquisa eleitoral</title>
+	<link rel="stylesheet" type="text/css" href="pesquisaEleitoral.css"> 
+</head>
+<body>
+	<form method="GET" action="arquivoEleicao.php">
+		<fieldset style="background-color: #F2F2F2;">
+			<legend>Pesquisa Eleitoral - Escolha um candidato entre as categorias abaixo</legend>
+
+			<legend>Líder de Sala</legend>
+			<fieldset id="escolha" style="text-align: center;">
+				<div class="lider">
+
+					<div class="caixa_silvio">
+						<label for="silvio">
+							<img id="fotoRedonda" src="imagens/silvio.jpg" /> 
+						</label>
+						
+						<label>
+							<input type="radio" id="silvio" name="lider" value="silvio" required />
+							Silvio Santos
+						</label>	
+					</div>
+					
+					<div class="caixa_roberto">
+						<label for="roberto">
+							<img id="fotoRedonda" src="imagens/roberto.jpg" />
+						</label>
+
+						<label>
+							<input type="radio" id="roberto" name="lider" value="roberto" />
+							Roberto Justus
+						</label>	
+					</div>
+				</div>
+			</fieldset>
+			
+			<legend>Vice-Líder</legend>
+			<fieldset id="escolha" style="text-align: center;">
+				<div class="vice-lider">
+
+					<div class="caixa_tom">
+						<label for="tom">
+							<img id="fotoRedonda" src="imagens/tom.jpg" />
+						</label>
+					
+						<label class="btn_tom">
+							<input type="radio" name="vice-lider" id="tom" value="tom" required />
+							Tom Cavalcanti
+						</label>
+					</div>
+							
+					<div class="caixa_nobrega">
+						<label for="nobrega">
+							<img id="fotoRedonda" src="imagens/nobrega.jpg" />
+						</label>
+					
+						<label class="btn_nobrega">
+							<input type="radio" id="nobrega" name="vice-lider" value="nobrega" />
+							Carlos Alberto
+						</label>	
+					</div>
+				</div>
+			</fieldset>
+		
+			<legend>Humorista</legend>
+			<fieldset id="escolha" style="text-align: center;">
+				<div class="humorista">
+					<div class="caixa_zacarias">
+						<label for="zacarias">
+							<img id="fotoRedonda" src="imagens/zacarias.jpg" />
+						</label>
+
+						<label>
+							<input type="radio" id="zacarias" name="humorista" value="zacarias" required />
+							Zacarias	
+						</label>
+					</div>
+					
+					<div class="caixa_mussum">
+						<label for="mussum">
+							<img id="fotoRedonda" src="imagens/mussum.jpg" />	
+						</label>
+
+						<label>
+							<input type="radio" id="mussum" name="humorista" value="mussum" />
+							Mussum
+						</label>
+					</div>
+					
+					<div class="caixa_dede">
+						<label for="dede">
+							<img id="fotoRedonda" src="imagens/dede.jpg" />
+						</label>
+
+						<label>
+							<input type="radio" id="dede" name="humorista" value="dede" />
+							Dedé
+						</label>
+					</div>
+					
+					<div class="caixa_didi">
+						<label for="didi">
+							<img id="fotoRedonda" src="imagens/didi.jpg" />	
+						</label>
+				
+						<label>
+							<input type="radio" id="didi" name="humorista" value="didi" />
+							Didi	
+						</label>
+					</div>
+				</div>
+			
+			</fieldset>
+		
+			<fieldset>
+				<label for="nome">Nome:</label><!-- Nome do usuário -->
+				<input type="text" id="nome" name="nome" autofocus maxlength="30" size="30" placeholder="Digite o seu nome..." required />
+				
+
+				<label for="idade">Idade:</label><!-- Nome do usuário -->
+				<input type="number" id="idade" name="idade" autofocus placeholder="Digite a sua idade... " required />
+				<br/> <br/>
+
+			</fieldset>
+
+		</fieldset>
+		<button type="submit" style="background-color:green; width: 100px;"><strong>Votar</strong></button>
+		<button type="reset" style="background-color:white; width: 100px;">Limpar</button>
+	</form>
+</body>
+</html>

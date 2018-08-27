@@ -1,0 +1,40 @@
+
+#fotoRedonda {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	margin: 20px;
+}
+
+#escolha:hover {
+	background-color: #E6E6E6;
+}
+
+.caixa_nobrega, .caixa_tom, .caixa_silvio, .caixa_roberto, .caixa_zacarias, .caixa_mussum, .caixa_dede, .caixa_didi {
+	width: 200px;
+    border: 2px solid #333333;
+    margin: 10px;
+    background-color: #E6E6E7;
+}
+
+.lider, .vice-lider {
+	display: flex;
+    width: 500px;
+    left: 50%;
+    right: auto;
+    top: 120px;
+    position: relative;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.humorista {
+	display: flex;
+    width: 500px;
+    left: 39%;
+    right: auto;
+    top: 120px;
+    position: relative;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}

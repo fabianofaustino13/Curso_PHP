@@ -1,0 +1,86 @@
+body {
+	font-family: "Crimson Text", "Times New Roman", serif;
+	background-color: #00fffd;
+	font-size: 120%;
+}
+
+h1, h2 {
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+
+h1 {
+	text-align: center;
+	background-color: #851944;
+	color: #fff;
+}
+h2 {
+	text-align: center;
+	background-color: #001944;
+	color: #cccfff;
+}
+
+p {
+	text-align: justify;
+}
+
+#paragrafo-bairro {
+	text-align: center;
+}
+
+#mapa {
+	border-radius: 20%;
+	width: 300px;
+	height: 300px;
+}
+
+#papodromo {
+	position: relative;
+    bottom: 0px;
+    right: 0px;
+    left: 400px;
+    width: 300px;
+}
+
+#presepio {
+	position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0px;
+    left: 800px;
+    width: 300px;
+}
+
+#kurtkart {
+	position: relative;
+    bottom: 0px;
+    right: 0px;
+    left: 400px;
+    width: 300px;
+}
+#arena {
+	position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 350px;
+    left: 800px;
+    width: 300px;/
+}
+
+p {
+	text-align: justify;
+}
+
+a {
+	color: red;
+	text-decoration: none;
+}
+
+a:visited {
+	color: black;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: gold;
+	font-weight: bold;
+}

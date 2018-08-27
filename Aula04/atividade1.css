@@ -1,0 +1,33 @@
+
+table {
+	border-collapse: collapse;
+}
+.tabela1, td {
+	border: 1px solid;
+	
+}
+
+.coluna-nome {
+	width: 60%;
+}
+
+.alinhamento-coluna-nome {
+	text-align: left;
+}
+
+.tabela2 {
+	background-color: gray;
+}
+
+.tabela3 {
+	background-color: orange;
+}
+
+.tabela4 {
+	background-color: gray;
+	
+}
+
+#tabela4 {
+	border: none;
+}

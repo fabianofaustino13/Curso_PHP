@@ -1,0 +1,84 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#div-container {
+	background-color: white;
+	width: 1000px;
+	height: 950px;
+	margin: auto;
+}
+
+#div-cabecalho {
+	background-color: red;
+	text-align: center;
+	padding: 35px 0;
+	font-weight: bold;
+	margin: 10px;
+	width: 900px;
+	
+}
+
+#div-espaco {
+	margin: 10px;
+	background-color: white;
+}
+
+#div-menu {
+	margin: 10px;
+	height: 20px;
+	width: 900px;
+	background-color: lightgray;
+	text-align: center;
+	font-weight: bold;
+}
+
+#div-corpo {
+	width: 900px;
+	height: 700px;
+	margin: 10px;
+}
+
+#div-menu-lateral {
+	float: left;
+	background-color: yellow;
+    width: 150px;
+    height: 700px;
+}
+
+#div-conteudo {
+	background-color: white;
+	float: left;
+    width: 580px;
+    height: 700px;
+    margin: 0px 10px;
+}
+
+#div-conteudo-1 {
+	text-align: center;
+	background-color: orange;
+    margin-bottom: 10px;
+    width: 580px;
+    height: 350px;
+}
+
+#div-conteudo-2 {
+	background-color: green;
+	width: 580px;
+    height: 340px;
+}
+
+#div-extra {
+	background-color: purple;
+	float: left;
+    width: 150px;
+    height: 700px;
+}
+
+#div-rodape {
+	margin: 10px;
+	background-color: cyan;
+    width: 900px;
+    height: 30px;
+}
